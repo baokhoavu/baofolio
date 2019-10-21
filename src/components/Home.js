@@ -43,16 +43,14 @@ const Interactivecontainer = styled.div`
 
     // Work Box
     div:nth-of-type(2) {
-        
-        background: blue;
-        // height: 500px;
+        // background: blue;
+        height: 90vh;
+        position: absolute;
+        left: -100vw;
+        top: 5%;
 
-        // position: absolute;
-        // left: 0;
-        // top: 400px;
-
-        &:hover {
-            display: block;
+        &.active {
+            left: 7.5% !important;
         }
     }
 
@@ -62,7 +60,7 @@ const Interactivecontainer = styled.div`
         height: 0;
         position: absolute;
         top: 39%;
-        right: 10%;
+        right: 8%;
 
         &.active {
             // display: block !important;
@@ -72,9 +70,7 @@ const Interactivecontainer = styled.div`
 
     // Contact Box
     div:nth-of-type(4) {
-        // background: green;
         height: 0;
-        transition: .75s;
 
         &.active {
             // display: block !important;
@@ -148,6 +144,23 @@ const Linkable = styled.a`
     }
 `
 
+// const Projects = styled.div`
+    
+//     display: block !important;
+//     height: 500px !important;
+//     width: 100% !important;
+
+//     &:nth-of-type(1) {
+//         background: black;
+//     }
+//     &:nth-of-type(2) {
+//         background: grey;
+//     }
+//     &:nth-of-type(3) {
+//         background: yellow;
+//     }
+// `
+
 // Home Class Component
 export default class Home extends Component {
     constructor(props) {
@@ -177,8 +190,13 @@ export default class Home extends Component {
             })
         }   else if (e.target.className.indexOf('bee') > -1) {
             this.setState({
-                b: !this.state.b
+                b: true
             })
+            this.state.timer = setTimeout(() => {
+                this.setState({
+                    b: false
+                })
+            }, 5000)
         }   else if (e.target.className.indexOf('cee') > -1) {
             this.setState({
                 c: true
@@ -234,16 +252,16 @@ export default class Home extends Component {
                             </Comment>
 
                             <Comment>
-                                <Linkable className={'bee ' + (this.state.b ? 'active' : null )} onMouseEnter={this.hover} onMouseLeave={this.hover}>
-                                     Work 
+                                <Linkable className={'bee ' + (this.state.b ? 'active' : null )} onMouseEnter={this.hover}>
+                                     Recent Work 
                                 </Linkable>
                                 -
-                                <Linkable className={'cee ' + (this.state.c ? 'active' : null )} onMouseEnter={this.hover} onMouseLeave={this.hover}>
-                                     Resume 
+                                <Linkable className={'dee ' + (this.state.d ? 'active' : null )} onMouseEnter={this.hover}>
+                                    Contact
                                 </Linkable>
                                 - 
-                                <Linkable className={'dee ' + (this.state.d ? 'active' : null )} onMouseEnter={this.hover} onMouseLeave={this.hover}>
-                                    Contact
+                                <Linkable className={'cee ' + (this.state.c ? 'active' : null )} onMouseEnter={this.hover}>
+                                     Resume 
                                 </Linkable>
                             </Comment>
 
@@ -253,6 +271,30 @@ export default class Home extends Component {
                         <Interactivecontainer>
                             <div></div>
                             <div className={'bee ' + (this.state.b ? 'active' : null )}>
+                                {/* <Projects></Projects>
+                                <Projects></Projects>
+                                <Projects></Projects> */}
+                                <p>
+                                    <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
+                                    <br />
+                                    <a href="#">Flowers</a>
+                                    <br />
+                                    ReactJS - Redux - Express - Mongodb
+                                </p>
+                                <p>
+                                    <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
+                                    <br />
+                                    <a href="#">Flowers</a>
+                                    <br />
+                                    ReactJS - Redux - Express - Mongodb
+                                </p>
+                                <p>
+                                    <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
+                                    <br />
+                                    <a href="#">Flowers</a>
+                                    <br />
+                                    ReactJS - Redux - Express - Mongodb
+                                </p>
                             </div>
                             <div className={'cee ' + (this.state.c ? 'active' : null )}>
                             </div>

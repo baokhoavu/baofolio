@@ -20,3 +20,9 @@
 .App-link {
   color: #09d3ac;
 }
+
+.bee.active,
+.cee.active,
+.dee.active {
+  color: #99A;
+}
