@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import '../App.css';
+import { NavLink, BrowserRouter as Link } from "react-router-dom";
 
 // Container
 const Boxcontainer = styled.div`
@@ -119,7 +120,7 @@ const Vline = styled.div`
 
     &.active {
         // background: #09d3ac;
-        height: 100%;
+        // height: 100%;
     }
 `
 
@@ -127,6 +128,17 @@ const Vline = styled.div`
 const Comment = styled.p`
     font-size: 24px;
     text-align: left;
+
+    a {
+        color: #09d3ac;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #09D3D8;
+        text-decoration: underline;
+    }
 `
 
 // Clickables
@@ -252,17 +264,28 @@ export default class Home extends Component {
                             </Comment>
 
                             <Comment>
-                                <Linkable className={'bee ' + (this.state.b ? 'active' : null )} onMouseEnter={this.hover}>
-                                     Recent Work 
+                                <Linkable>
+                                    <NavLink to="/about">About</NavLink>
                                 </Linkable>
-                                -
-                                <Linkable className={'dee ' + (this.state.d ? 'active' : null )} onMouseEnter={this.hover}>
-                                    Contact
+                            </Comment>
+
+                            <Comment>
+                                <Linkable>
+                                    <NavLink to="/work">Work</NavLink>
                                 </Linkable>
-                                - 
-                                <Linkable className={'cee ' + (this.state.c ? 'active' : null )} onMouseEnter={this.hover}>
-                                     Resume 
-                                </Linkable>
+                            </Comment>
+
+                            <Comment>
+                                <p>
+                                    (626) 367-3112
+                                </p>
+                                <p>
+                                    {/* <a href="mailto:baokhoadinhvu@gmail.com">baokhoadinhvu@gmail.com</a> */}
+                                    baokhoadinhvu@gmail.com
+                                </p>
+                                <p>
+                                    {/* <a href="https://www.linkedin.com/in/baokhoadvu/">Baokhoa</a>  */}
+                                </p>
                             </Comment>
 
                         </Boxcontainer>
