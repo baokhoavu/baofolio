@@ -5,8 +5,16 @@ import '../App.css';
 import { NavLink, BrowserRouter as Link } from "react-router-dom";
 
 // Container
+const Body = styled.div `
+    // background-color: #282c34;
+`
+
 const Boxcontainer = styled.div`
     width: 500px;
+
+    &:nth-child(2) {
+        z-index: 6;
+    }
 `
 
 const Interactivecontainer = styled.div`
@@ -156,23 +164,6 @@ const Linkable = styled.a`
     }
 `
 
-// const Projects = styled.div`
-    
-//     display: block !important;
-//     height: 500px !important;
-//     width: 100% !important;
-
-//     &:nth-of-type(1) {
-//         background: black;
-//     }
-//     &:nth-of-type(2) {
-//         background: grey;
-//     }
-//     &:nth-of-type(3) {
-//         background: yellow;
-//     }
-// `
-
 // Home Class Component
 export default class Home extends Component {
     constructor(props) {
@@ -238,103 +229,105 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <div className="App">
-                    <header className="App-header">
-                        <Boxcontainer>
+                <Body>
+                    <div className="App">
+                        <header className="App-header">
+                            <Boxcontainer>
 
-                            {/* Box Hover */}
-                            <Box className='box' onMouseEnter={this.hover} onMouseLeave={this.hover}>
+                                {/* Box Hover */}
+                                <Box className='box' onMouseEnter={this.hover} onMouseLeave={this.hover}>
+                                
+                                    {/* Horizontal Line */}
+                                    <Hline className={this.state.active ? 'active' : null }></Hline>
+                                
+                                    Bao
+                                
+                                    {/* Vertical Line */}
+                                    <Vline className={this.state.active ? 'active' : null }></Vline>
+
+                                </Box>
+
+                            </Boxcontainer>
+
+                            <Boxcontainer>
+                                
+                                <Comment>
+                                    Full Stack - Web Developer ( Los Angeles )
+                                </Comment>
+
+                                <Comment>
+                                    <Linkable>
+                                        <NavLink to="/about">About</NavLink>
+                                    </Linkable>
+                                </Comment>
+
+                                <Comment>
+                                    <Linkable>
+                                        <NavLink to="/work">Work</NavLink>
+                                    </Linkable>
+                                </Comment>
+
+                                <Comment>
+                                    <p>
+                                        (626) 367-3112
+                                    </p>
+                                    <p>
+                                        {/* <a href="mailto:baokhoadinhvu@gmail.com">baokhoadinhvu@gmail.com</a> */}
+                                        baokhoadinhvu@gmail.com
+                                    </p>
+                                    <p>
+                                        {/* <a href="https://www.linkedin.com/in/baokhoadvu/">Baokhoa</a>  */}
+                                    </p>
+                                </Comment>
+
+                            </Boxcontainer>
                             
-                                {/* Horizontal Line */}
-                                <Hline className={this.state.active ? 'active' : null }></Hline>
-                            
-                                Bao
-                            
-                                {/* Vertical Line */}
-                                <Vline className={this.state.active ? 'active' : null }></Vline>
-
-                            </Box>
-
-                        </Boxcontainer>
-
-                        <Boxcontainer>
-                            
-                            <Comment>
-                                Full Stack - Web Developer ( Los Angeles )
-                            </Comment>
-
-                            <Comment>
-                                <Linkable>
-                                    <NavLink to="/about">About</NavLink>
-                                </Linkable>
-                            </Comment>
-
-                            <Comment>
-                                <Linkable>
-                                    <NavLink to="/work">Work</NavLink>
-                                </Linkable>
-                            </Comment>
-
-                            <Comment>
-                                <p>
-                                    (626) 367-3112
-                                </p>
-                                <p>
-                                    {/* <a href="mailto:baokhoadinhvu@gmail.com">baokhoadinhvu@gmail.com</a> */}
-                                    baokhoadinhvu@gmail.com
-                                </p>
-                                <p>
-                                    {/* <a href="https://www.linkedin.com/in/baokhoadvu/">Baokhoa</a>  */}
-                                </p>
-                            </Comment>
-
-                        </Boxcontainer>
-                        
-                        {/* Live Events */}
-                        <Interactivecontainer>
-                            <div></div>
-                            <div className={'bee ' + (this.state.b ? 'active' : null )}>
-                                {/* <Projects></Projects>
-                                <Projects></Projects>
-                                <Projects></Projects> */}
-                                <p>
-                                    <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
-                                    <br />
-                                    <a href="#">Flowers</a>
-                                    <br />
-                                    ReactJS - Redux - Express - Mongodb
-                                </p>
-                                <p>
-                                    <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
-                                    <br />
-                                    <a href="#">Flowers</a>
-                                    <br />
-                                    ReactJS - Redux - Express - Mongodb
-                                </p>
-                                <p>
-                                    <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
-                                    <br />
-                                    <a href="#">Flowers</a>
-                                    <br />
-                                    ReactJS - Redux - Express - Mongodb
-                                </p>
-                            </div>
-                            <div className={'cee ' + (this.state.c ? 'active' : null )}>
-                            </div>
-                            <div onMouseEnter={this.hover} className={'deedee ' + (this.state.d ? 'active' : null )}>
-                                <p>
-                                    Phone - (626) 367-3112
-                                </p>
-                                <p>
-                                    Email - <a href="mailto:baokhoadinhvu@gmail.com">baokhoadinhvu@gmail.com</a>
-                                </p>
-                                <p>
-                                    Linkedin - <a href="https://www.linkedin.com/in/baokhoadvu/">Baokhoa</a> 
-                                </p>
-                            </div>
-                        </Interactivecontainer>
-                    </header>
-                </div>
+                            {/* Live Events */}
+                            <Interactivecontainer>
+                                <div></div>
+                                <div className={'bee ' + (this.state.b ? 'active' : null )}>
+                                    {/* <Projects></Projects>
+                                    <Projects></Projects>
+                                    <Projects></Projects> */}
+                                    <p>
+                                        <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
+                                        <br />
+                                        <a href="#">Flowers</a>
+                                        <br />
+                                        ReactJS - Redux - Express - Mongodb
+                                    </p>
+                                    <p>
+                                        <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
+                                        <br />
+                                        <a href="#">Flowers</a>
+                                        <br />
+                                        ReactJS - Redux - Express - Mongodb
+                                    </p>
+                                    <p>
+                                        <img height="300" width="auto" src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg" />
+                                        <br />
+                                        <a href="#">Flowers</a>
+                                        <br />
+                                        ReactJS - Redux - Express - Mongodb
+                                    </p>
+                                </div>
+                                <div className={'cee ' + (this.state.c ? 'active' : null )}>
+                                </div>
+                                <div onMouseEnter={this.hover} className={'deedee ' + (this.state.d ? 'active' : null )}>
+                                    <p>
+                                        Phone - (626) 367-3112
+                                    </p>
+                                    <p>
+                                        Email - <a href="mailto:baokhoadinhvu@gmail.com">baokhoadinhvu@gmail.com</a>
+                                    </p>
+                                    <p>
+                                        Linkedin - <a href="https://www.linkedin.com/in/baokhoadvu/">Baokhoa</a> 
+                                    </p>
+                                </div>
+                            </Interactivecontainer>
+                        </header>
+                    </div>
+                </Body>
             </div>
         )
     }

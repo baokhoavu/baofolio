@@ -14,6 +14,7 @@ const Navline = styled.div`
     left: 10px;
     top: 10px;
     transition: 0.4s;
+    z-index: 4;
 
     a {
         display: block;
