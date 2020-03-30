@@ -3,6 +3,7 @@
 Created using ReactJS with some extra libraries
 - styled components
 - react dom
+- react particles
 
 Utilizing React Dev Tools / Chrome Dev Tools to optimize.
 
