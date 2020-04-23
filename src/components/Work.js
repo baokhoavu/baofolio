@@ -8,6 +8,7 @@ import imageC from '../assets/C.PNG';
 import imageD from '../assets/D.PNG';
 import imageE from '../assets/E.PNG';
 import imageF from '../assets/F.PNG';
+import imageG from '../assets/G.PNG';
 
 const AboutBox = styled.div`
 
@@ -148,11 +149,16 @@ const Image = styled.a`
         background-image: url("${imageF}");
     }
 
+    &.g {
+        background-image: url("${imageG}");
+    }
+
     &:hover {
         // border-left: 5px solid #09D3AD;
         // border-bottom: 5px solid #09D3AD;
 
-        border: 5px solid #09D3AD;
+        // border: 5px solid #09D3AD;
+        transform: scale(1.25);
     }
     
 `
@@ -209,14 +215,14 @@ export default class About extends Component {
                                     </div>
                                 </div>
                             </Work>
-                            {/* <Work>
+                            <Work>
                                 <div class="first">
-                                    <h2>Ride To Conquer Cancer Toronto</h2>
+                                    <a href="https://baokhoavu.github.io/gameOfWar/">Game Of War</a>
                                     <div>
-                                        <Image className="a"></Image>
+                                        <Image className="g"></Image>
                                     </div>
                                 </div>
-                                <div>
+                                {/* <div>
                                     <h2>Online Check-In</h2>
                                     <div>
                                         <Image className="b"></Image>
@@ -227,8 +233,8 @@ export default class About extends Component {
                                     <div>
                                         <Image className="c"></Image>
                                     </div>
-                                </div>
-                            </Work> */}
+                                </div> */}
+                            </Work>
                         </div>
                     </div>
                 </div>
