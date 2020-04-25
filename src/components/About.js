@@ -16,12 +16,18 @@ const AboutBox = styled.div`
         height: 100%;
         padding-top: 20px;
         margin: 0 auto;
+        display: flex;
     }
 
     > div > div > div {
-        margin-top: 10%;
+        // margin-top: 10%;
         display: inline-block;
         width: 50%;
+
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     > div > div > div > p {
