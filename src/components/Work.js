@@ -18,6 +18,15 @@ const AboutBox = styled.div`
     height: 100vh;    
     background: #282c34;
 
+    h1 span a {
+        color: #09D3AD;
+        font-size: 32px;
+    }
+    
+    h1 span a:hover {
+        text-decoration: underline;
+    }
+
     > div > div {
         max-width: 1280px;
         height: 100%;
@@ -183,9 +192,11 @@ export default class About extends Component {
                 <div>
                     <div>
                         <div>
-                            <h1>
-                                <span>Work</span>
-                            </h1>
+                            <Work>
+                                <h1>
+                                    <span>Work - <a href="https://github.com/baokhoavu">Github</a></span>
+                                </h1>
+                            </Work>
                             <Work>
                                 <div class="first">
                                     <a href="http://ride.conquercancer.ca/toronto20">Ride To Conquer Cancer Toronto</a>
