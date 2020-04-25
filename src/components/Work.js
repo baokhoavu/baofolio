@@ -9,6 +9,8 @@ import imageD from '../assets/D.PNG';
 import imageE from '../assets/E.PNG';
 import imageF from '../assets/F.PNG';
 import imageG from '../assets/G.PNG';
+import imageH from '../assets/H.PNG';
+import imageI from '../assets/I.PNG';
 
 const AboutBox = styled.div`
 
@@ -85,6 +87,7 @@ const Work = styled.div`
         text-decoration: none;
         z-index: 7;
         position: relative;
+        min-height: 50px
 
         &:hover {
             text-decoration: underline;
@@ -151,6 +154,14 @@ const Image = styled.a`
 
     &.g {
         background-image: url("${imageG}");
+    }
+
+    &.h {
+        background-image: url("${imageH}");
+    }
+
+    &.i {
+        background-image: url("${imageI}");
     }
 
     &:hover {
@@ -222,18 +233,18 @@ export default class About extends Component {
                                         <Image className="g"></Image>
                                     </div>
                                 </div>
-                                {/* <div>
-                                    <h2>Online Check-In</h2>
+                                <div>
+                                    <a href="https://food-meets-tinder.herokuapp.com/">Food Meet Tinder</a>
                                     <div>
-                                        <Image className="b"></Image>
+                                        <Image className="h"></Image>
                                     </div>
                                 </div>
                                 <div class="last">
-                                    <h2>Causeforce KOI</h2>
+                                    <a href="https://peoplewhojustwannasaystuff.wordpress.com">PeopleWhoJustWannaSayStuff</a>
                                     <div>
-                                        <Image className="c"></Image>
+                                        <Image className="i"></Image>
                                     </div>
-                                </div> */}
+                                </div>
                             </Work>
                         </div>
                     </div>
