@@ -15,7 +15,7 @@ import imageI from '../assets/I.PNG';
 const AboutBox = styled.div`
 
     width: 100%;
-    height: 100vh;    
+    // height: 100vh;    
     background: #282c34;
 
     h1 span a {
