@@ -230,19 +230,19 @@ export default class About extends Component {
                                 <div class="first">
                                     <a href="https://baokhoavu.github.io/gameOfWar/">Game Of War</a>
                                     <div>
-                                        <Image className="g"></Image>
+                                        <Image className="g" href="https://baokhoavu.github.io/gameOfWar/"></Image>
                                     </div>
                                 </div>
                                 <div>
                                     <a href="https://food-meets-tinder.herokuapp.com/">Food Meet Tinder</a>
                                     <div>
-                                        <Image className="h"></Image>
+                                        <Image className="h" href="https://food-meets-tinder.herokuapp.com/"></Image>
                                     </div>
                                 </div>
                                 <div class="last">
                                     <a href="https://peoplewhojustwannasaystuff.wordpress.com">PeopleWhoJustWannaSayStuff</a>
                                     <div>
-                                        <Image className="i"></Image>
+                                        <Image className="i" href="https://peoplewhojustwannasaystuff.wordpress.com"></Image>
                                     </div>
                                 </div>
                             </Work>
