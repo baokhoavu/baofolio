@@ -104,6 +104,11 @@ const Work = styled.div`
         }
     }
 
+    p {
+        font-weight: bold;
+        color: #fff;
+    }
+
     @media screen and (max-width: 1280px) {
         display: block;
 
@@ -200,18 +205,27 @@ export default class About extends Component {
                             <Work>
                                 <div class="first">
                                     <a href="http://ride.conquercancer.ca/toronto20">Ride To Conquer Cancer Toronto</a>
+                                    <p>
+                                        WordPress, SCSS, jQuery, Jupiter Theme
+                                    </p>
                                     <div>
                                         <Image className="a" href="http://ride.conquercancer.ca/toronto20"></Image>
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="https://secure.conquercancer.ca/va19_dev/index.html#/step-01">Online Check-In</a>
+                                    <a href="https://secure.conquercancer.ca/to20_oci/index.html#/step-01">Online Check-In</a>
+                                    <p>
+                                        <span>Angular 8</span>, Luminate, Material, Typescript
+                                    </p>
                                     <div>
                                         <Image className="b" href="https://secure.conquercancer.ca/va19_dev/index.html#/step-01"></Image>
                                     </div>
                                 </div>
                                 <div class="last">
                                     <a href="https://cfkoi.herokuapp.com/">Causeforce KOI</a>
+                                    <p>
+                                        <span>Angular 2</span>, Express, NodeJS, Mongodb, Luminate
+                                    </p>
                                     <div>
                                         <Image className="c" href="https://cfkoi.herokuapp.com/"></Image>
                                     </div>
@@ -220,18 +234,27 @@ export default class About extends Component {
                             <Work>
                                 <div class="first">
                                     <a href="https://secure.conquercancer.ca/index.html">Ride To Conqer Cancer</a>
+                                    <p>
+                                        HTML, jQuery, Bootstrap, Luminate
+                                    </p>
                                     <div>
                                         <Image className="d" href="https://secure.conquercancer.ca/index.html"></Image>
                                     </div>
                                 </div>
                                 <div>
                                     <a href="https://secure.weekendtoconquercancer.ca/site/SPageNavigator/to20_homepage">Weekend To Conquer Cancer</a>
+                                    <p>
+                                        HTML, jQuery, Bootstrap, Luminate
+                                    </p>
                                     <div>
                                         <Image className="e" href="https://secure.weekendtoconquercancer.ca/site/SPageNavigator/to20_homepage"></Image>
                                     </div>
                                 </div>
                                 <div class="last">
                                     <a href="http://causeforce.com/">Causeforce</a>
+                                    <p>
+                                        WordPress, Luminate, Sage Theme, jQuery
+                                    </p>
                                     <div>
                                         <Image className="f" href="http://causeforce.com/"></Image>
                                     </div>
@@ -240,18 +263,27 @@ export default class About extends Component {
                             <Work>
                                 <div class="first">
                                     <a href="https://baokhoavu.github.io/gameOfWar/">Game Of War</a>
+                                    <p>
+                                        HTML, CSS, JS
+                                    </p>
                                     <div>
                                         <Image className="g" href="https://baokhoavu.github.io/gameOfWar/"></Image>
                                     </div>
                                 </div>
                                 <div>
                                     <a href="https://food-meets-tinder.herokuapp.com/">Food Meet Tinder</a>
+                                    <p>
+                                        HTML, Bootstrap, Mongodb, Express
+                                    </p>
                                     <div>
                                         <Image className="h" href="https://food-meets-tinder.herokuapp.com/"></Image>
                                     </div>
                                 </div>
                                 <div class="last">
                                     <a href="https://peoplewhojustwannasaystuff.wordpress.com">PeopleWhoJustWannaSayStuff</a>
+                                    <p>
+                                        WordPress, Boostrap, jQuery
+                                    </p>
                                     <div>
                                         <Image className="i" href="https://peoplewhojustwannasaystuff.wordpress.com"></Image>
                                     </div>
