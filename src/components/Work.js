@@ -27,6 +27,7 @@ const AboutBox = styled.div`
     
     h1 span a:hover {
         text-decoration: underline;
+        color: #09D3D8 !important;
     }
 
     > div {
@@ -114,7 +115,7 @@ const Work = styled.div`
 
         &:hover {
             text-decoration: underline;
-            color: #0c547d;
+            color: #09D3D8 !important;
         }
     }
 

@@ -29,8 +29,12 @@ const Navline = styled.div`
         font-weight: bolder;
     }
 
+    a:hover {
+        border: 2px solid #09D3D8;
+    }
+
     &:hover {
-        background: #0c547d;
+        background: #09D3D8;
         cursor: pointer;
 
         a {

@@ -102,7 +102,7 @@ const Box = styled.div`
     position: relative;
     
     &:hover {
-        background: #0c547d;
+        background: #09D3D8;
         color: #282c34;
     }
 `
@@ -111,7 +111,7 @@ const Box = styled.div`
 const Hline = styled.div`
     height: 2px;
     width: 0;
-    background: #0c547d;
+    background: #09D3D8;
     transition: 0.25s;
 
     &.active {
@@ -121,13 +121,13 @@ const Hline = styled.div`
 // Responsive Vertical Line
 const Vline = styled.div`
     width: 2px;
-    background: #282c34;
+    background: #09D3D8;
     height: 1%;
     float: right;
     transition: 0.25s;
 
     &.active {
-        // background: #0c547d;
+        background: #09D3D8;
         // height: 100%;
     }
 `
