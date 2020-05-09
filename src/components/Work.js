@@ -268,7 +268,7 @@ export default class About extends Component {
                                 <div class="last">
                                     <a href="https://secure.conquercancer.ca/to20_oci/index.html#/step-01">Online Check-In</a>
                                     <p>
-                                        <span>Angular 8</span>, NodeJs, AWS, Dataservice, Blackbaud Luminate, Material, Typescript
+                                        <span>Angular 9</span>, NodeJs, AWS, Dataservice, Blackbaud Luminate, Material, Typescript
                                     </p>
                                 </div>
                             </Work>

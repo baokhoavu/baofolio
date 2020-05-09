@@ -72,7 +72,7 @@ export default class About extends Component {
                                 <span>Technology</span>
                             </h1>
                             <p>
-                                Angular 7
+                                Angular 9
                             </p>
                             <p>
                                 ReactJS
