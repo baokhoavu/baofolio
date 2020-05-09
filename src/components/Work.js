@@ -11,15 +11,17 @@ import imageF from '../assets/F.PNG';
 import imageG from '../assets/G.PNG';
 import imageH from '../assets/H.PNG';
 import imageI from '../assets/I.PNG';
+import imageJ from '../assets/J.PNG';
 
 const AboutBox = styled.div`
 
     width: 100%;
-    // height: 100vh;    
+    height: 100vh;    
     background: #282c34;
+    overflow: hidden;
 
     h1 span a {
-        color: #09D3AD;
+        color: #0c547d;
         font-size: 32px;
     }
     
@@ -27,16 +29,28 @@ const AboutBox = styled.div`
         text-decoration: underline;
     }
 
+    > div {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
     > div > div {
-        max-width: 1280px;
         height: 100%;
         padding: 20px 0 50px;
-        margin: 0 auto;
-        background: #282c34;
+        position: absolute;
+        left: 0;
+        right: 0;
+        overflow: auto;
+        ::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     > div > div > div {
-        margin-top: 10%;
+        max-width: 1280px;
+        margin: 5% auto 0;
     }
 
     > div > div > div > p {
@@ -50,7 +64,7 @@ const AboutBox = styled.div`
     }
 
     span {
-        color: #09D3AD;
+        color: #0c547d;
     }
 
     @media screen and (max-width: 1280px) {
@@ -74,33 +88,33 @@ const Work = styled.div`
     display: flex;
     flex-wrap: nowrap;
 
-    > div {
-        width: 30%;
-        margin: 0 3%;
-        // border: 2px solid red;
-    }
-
     > div.first {
-        margin-left: 0;
+        width: 35%;
+        padding: 50px;
     }
 
     > div.last {
-        margin-right: 0;
+        width: 60%;
+        padding: 40px 5% 0;
+
+    }
+
+    &.title {
+        padding: 0 50px;
     }
 
     a {
         color: #fff;
         font-size: 1.5em;
         font-weight: bolder;
-        margin: 15px 0 35px;
         text-decoration: none;
         z-index: 7;
         position: relative;
-        min-height: 50px
+        min-height: 50px;
 
         &:hover {
             text-decoration: underline;
-            color: #09D3AD;
+            color: #0c547d;
         }
     }
 
@@ -178,11 +192,15 @@ const Image = styled.a`
         background-image: url("${imageI}");
     }
 
-    &:hover {
-        // border-left: 5px solid #09D3AD;
-        // border-bottom: 5px solid #09D3AD;
+    &.j {
+        background-image: url("${imageJ}");
+    }    
 
-        // border: 5px solid #09D3AD;
+    &:hover {
+        // border-left: 5px solid #0c547d;
+        // border-bottom: 5px solid #0c547d;
+
+        // border: 5px solid #0c547d;
         transform: scale(1.25);
     }
     
@@ -197,86 +215,132 @@ export default class About extends Component {
                 <div>
                     <div>
                         <div>
-                            <Work>
+                            <Work className="title">
                                 <h1>
                                     <span>Work - <a href="https://github.com/baokhoavu">Github</a></span>
                                 </h1>
                             </Work>
                             <Work>
                                 <div class="first">
-                                    <a href="http://ride.conquercancer.ca/toronto20">Ride To Conquer Cancer Toronto</a>
+                                    <div>
+                                        <Image className="j" href="https://baoplans.herokuapp.com/"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://baoplans.herokuapp.com/">Baoplans</a>
                                     <p>
-                                        WordPress, SCSS, jQuery, Jupiter Theme
+                                        <span>ReactJS</span>, Google Maps, Styled Components
                                     </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
                                     <div>
                                         <Image className="a" href="http://ride.conquercancer.ca/toronto20"></Image>
                                     </div>
                                 </div>
-                                <div>
-                                    <a href="https://secure.conquercancer.ca/to20_oci/index.html#/step-01">Online Check-In</a>
+                                <div class="last">
+                                    <a href="http://ride.conquercancer.ca/toronto20">Ride To Conquer Cancer Toronto</a>
                                     <p>
-                                        <span>Angular 8</span>, Luminate, Material, Typescript
+                                        WordPress, SCSS, jQuery, Jupiter Theme, Restful API
                                     </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
                                     <div>
-                                        <Image className="b" href="https://secure.conquercancer.ca/va19_dev/index.html#/step-01"></Image>
+                                        <Image className="c" href="https://cfkoi.herokuapp.com/"></Image>
                                     </div>
                                 </div>
                                 <div class="last">
                                     <a href="https://cfkoi.herokuapp.com/">Causeforce KOI</a>
                                     <p>
-                                        <span>Angular 2</span>, Express, NodeJS, Mongodb, Luminate
+                                        <span>Angular 5</span>, Express, NodeJS, Mongodb, Mongoose, Blackbaud Luminate
                                     </p>
-                                    <div>
-                                        <Image className="c" href="https://cfkoi.herokuapp.com/"></Image>
-                                    </div>
                                 </div>
                             </Work>
                             <Work>
                                 <div class="first">
-                                    <a href="https://secure.conquercancer.ca/index.html">Ride To Conqer Cancer</a>
+                                    <div>
+                                        <Image className="b" href="https://secure.conquercancer.ca/va19_dev/index.html#/step-01"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://secure.conquercancer.ca/to20_oci/index.html#/step-01">Online Check-In</a>
                                     <p>
-                                        HTML, jQuery, Bootstrap, Luminate
+                                        <span>Angular 8</span>, NodeJs, AWS, Dataservice, Blackbaud Luminate, Material, Typescript
                                     </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
                                     <div>
                                         <Image className="d" href="https://secure.conquercancer.ca/index.html"></Image>
                                     </div>
                                 </div>
-                                <div>
-                                    <a href="https://secure.weekendtoconquercancer.ca/site/SPageNavigator/to20_homepage">Weekend To Conquer Cancer</a>
+                                <div class="last">
+                                    <a href="https://secure.conquercancer.ca/index.html">Ride To Conqer Cancer</a>
                                     <p>
-                                        HTML, jQuery, Bootstrap, Luminate
+                                        HTML, jQuery, Bootstrap, Blackbaud Luminate
                                     </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
                                     <div>
                                         <Image className="e" href="https://secure.weekendtoconquercancer.ca/site/SPageNavigator/to20_homepage"></Image>
                                     </div>
                                 </div>
                                 <div class="last">
-                                    <a href="http://causeforce.com/">Causeforce</a>
+                                    <a href="https://secure.weekendtoconquercancer.ca/site/SPageNavigator/to20_homepage">Weekend To Conquer Cancer</a>
                                     <p>
-                                        WordPress, Luminate, Sage Theme, jQuery
+                                        HTML, jQuery, Bootstrap, Blackbaud Luminate
                                     </p>
-                                    <div>
-                                        <Image className="f" href="http://causeforce.com/"></Image>
-                                    </div>
                                 </div>
                             </Work>
                             <Work>
                                 <div class="first">
-                                    <a href="https://baokhoavu.github.io/gameOfWar/">Game Of War</a>
+                                    <div>
+                                        <Image className="f" href="http://causeforce.com/"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="http://causeforce.com/">Causeforce</a>
                                     <p>
-                                        HTML, CSS, JS
+                                        WordPress, Blackbaud Luminate, Liquid Sage Theme, jQuery, Gulp
                                     </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
                                     <div>
                                         <Image className="g" href="https://baokhoavu.github.io/gameOfWar/"></Image>
                                     </div>
                                 </div>
-                                <div>
-                                    <a href="https://food-meets-tinder.herokuapp.com/">Food Meet Tinder</a>
+                                <div class="last">
+                                    <a href="https://baokhoavu.github.io/gameOfWar/">Game Of War</a>
                                     <p>
-                                        HTML, Bootstrap, Mongodb, Express
+                                        HTML, CSS, JS
                                     </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
                                     <div>
                                         <Image className="h" href="https://food-meets-tinder.herokuapp.com/"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://food-meets-tinder.herokuapp.com/">Food Meet Tinder</a>
+                                    <p>
+                                        HTML, Bootstrap, Mongodb, Express, Yelp API, OAuth
+                                    </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
+                                    <div>
+                                        <Image className="i" href="https://peoplewhojustwannasaystuff.wordpress.com"></Image>
                                     </div>
                                 </div>
                                 <div class="last">
@@ -284,9 +348,6 @@ export default class About extends Component {
                                     <p>
                                         WordPress, Boostrap, jQuery
                                     </p>
-                                    <div>
-                                        <Image className="i" href="https://peoplewhojustwannasaystuff.wordpress.com"></Image>
-                                    </div>
                                 </div>
                             </Work>
                         </div>

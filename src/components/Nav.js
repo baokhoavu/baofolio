@@ -20,17 +20,17 @@ const Navline = styled.div`
         display: block;
         text-align: center;
         width: 150px;
-        border: 2px solid #09d3ac;
+        border: 2px solid #0c547d;
         line-height: 2.5;
         height: 50px;
-        color: #09d3ac;
+        color: #0c547d;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bolder;
     }
 
     &:hover {
-        background: #09d3ac;
+        background: #0c547d;
         cursor: pointer;
 
         a {

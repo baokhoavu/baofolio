@@ -41,7 +41,7 @@ const AboutBox = styled.div`
     }
 
     span {
-        color: #09D3AD;
+        color: #0c547d;
     }
 
     @media screen and (max-width: 967px) {

@@ -90,8 +90,8 @@ const Interactivecontainer = styled.div`
 
 // First Row
 const Box = styled.div`
-    border-left: 2px solid #09d3ac;
-    border-bottom: 2px solid #09d3ac;
+    border-left: 2px solid #0c547d;
+    border-bottom: 2px solid #0c547d;
     // padding: 20px;
     width: 230px;
     height: 140px;
@@ -102,7 +102,7 @@ const Box = styled.div`
     position: relative;
     
     &:hover {
-        background: #09d3ac;
+        background: #0c547d;
         color: #282c34;
     }
 `
@@ -111,7 +111,7 @@ const Box = styled.div`
 const Hline = styled.div`
     height: 2px;
     width: 0;
-    background: #09d3ac;
+    background: #0c547d;
     transition: 0.25s;
 
     &.active {
@@ -127,7 +127,7 @@ const Vline = styled.div`
     transition: 0.25s;
 
     &.active {
-        // background: #09d3ac;
+        // background: #0c547d;
         // height: 100%;
     }
 `
@@ -138,7 +138,7 @@ const Comment = styled.p`
     text-align: left;
 
     a {
-        color: #09d3ac;
+        color: #0c547d;
         font-weight: bold;
         text-decoration: none;
     }
