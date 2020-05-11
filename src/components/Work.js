@@ -12,6 +12,7 @@ import imageG from '../assets/G.PNG';
 import imageH from '../assets/H.PNG';
 import imageI from '../assets/I.PNG';
 import imageJ from '../assets/J.PNG';
+import imageK from '../assets/K.PNG';
 
 const AboutBox = styled.div`
 
@@ -195,7 +196,12 @@ const Image = styled.a`
 
     &.j {
         background-image: url("${imageJ}");
+    }   
+
+    &.k {
+        background-image: url("${imageK}");
     }    
+ 
 
     &:hover {
         // border-left: 5px solid #0c547d;
@@ -220,6 +226,19 @@ export default class About extends Component {
                                 <h1>
                                     <span>Work - <a href="https://github.com/baokhoavu">Github</a></span>
                                 </h1>
+                            </Work>
+                            <Work>
+                                <div class="first">
+                                    <div>
+                                        <Image className="k" href="https://baosum.herokuapp.com/#/tab/friends"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://baosum.herokuapp.com/#/tab/friends">Bao Sum Items</a>
+                                    <p>
+                                        <span>Ionic 4</span>, Angular, Express, CSS, JavaScript
+                                    </p>
+                                </div>
                             </Work>
                             <Work>
                                 <div class="first">
