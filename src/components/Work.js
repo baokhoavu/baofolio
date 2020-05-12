@@ -230,6 +230,19 @@ export default class About extends Component {
                             <Work>
                                 <div class="first">
                                     <div>
+                                        <Image className="a" href="http://ride.conquercancer.ca/toronto20"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="http://ride.conquercancer.ca/toronto20">Ride To Conquer Cancer Toronto</a>
+                                    <p>
+                                        WordPress, SCSS, jQuery, Jupiter Theme, Restful API
+                                    </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
+                                    <div>
                                         <Image className="k" href="https://baosum.herokuapp.com/#/tab/friends"></Image>
                                     </div>
                                 </div>
@@ -250,19 +263,6 @@ export default class About extends Component {
                                     <a href="https://baoplans.herokuapp.com/">Baoplans</a>
                                     <p>
                                         <span>ReactJS</span>, Google Maps, Styled Components
-                                    </p>
-                                </div>
-                            </Work>
-                            <Work>
-                                <div class="first">
-                                    <div>
-                                        <Image className="a" href="http://ride.conquercancer.ca/toronto20"></Image>
-                                    </div>
-                                </div>
-                                <div class="last">
-                                    <a href="http://ride.conquercancer.ca/toronto20">Ride To Conquer Cancer Toronto</a>
-                                    <p>
-                                        WordPress, SCSS, jQuery, Jupiter Theme, Restful API
                                     </p>
                                 </div>
                             </Work>
