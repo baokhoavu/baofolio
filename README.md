@@ -1,6 +1,7 @@
 ## Bao's Portfolio
 
-Created using ReactJS with some extra libraries
+Portfolio of Web Experience created using ReactJS with some extra libraries. Experience ranges from Angular to ReactJS.
+
 - styled components
 - react dom
 - react particles
