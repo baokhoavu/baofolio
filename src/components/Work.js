@@ -13,6 +13,7 @@ import imageH from '../assets/H.PNG';
 import imageI from '../assets/I.PNG';
 import imageJ from '../assets/J.PNG';
 import imageK from '../assets/K.PNG';
+import imageL from '../assets/L.png';
 
 const AboutBox = styled.div`
 
@@ -200,7 +201,11 @@ const Image = styled.a`
 
     &.k {
         background-image: url("${imageK}");
-    }    
+    }
+
+    &.l {
+        background-image: url("${imageL}");
+    }
  
 
     &:hover {
@@ -224,8 +229,21 @@ export default class About extends Component {
                         <div>
                             <Work className="title">
                                 <h1>
-                                    <span>Work - <a href="https://github.com/baokhoavu">Github</a></span>
+                                    <span>Work - <a href="https://baoskitchen.herokuapp.com">Baos Kitchen</a></span>
                                 </h1>
+                            </Work>
+                            <Work>
+                                <div class="first">
+                                    <div>
+                                        <Image className="l" href="https://baoskitchen.herokuapp.com"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://baoskitchen.herokuapp.com">Baos Kitchen</a>
+                                    <p>
+                                        HTML, CSS, JS, Spoontacular API
+                                    </p>
+                                </div>
                             </Work>
                             <Work>
                                 <div class="first">
