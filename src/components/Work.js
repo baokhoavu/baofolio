@@ -267,7 +267,7 @@ export default class About extends Component {
                                 <div class="last">
                                     <a href="https://baosum.herokuapp.com/#/tab/friends">Bao Sum Items</a>
                                     <p>
-                                        <span>Ionic 4</span>, Angular, Express, CSS, JavaScript
+                                        Ionic 4, Angular, Express, CSS, JavaScript
                                     </p>
                                 </div>
                             </Work>
@@ -280,7 +280,7 @@ export default class About extends Component {
                                 <div class="last">
                                     <a href="https://baoplans.herokuapp.com/">Baoplans</a>
                                     <p>
-                                        <span>ReactJS</span>, Google Maps, Styled Components
+                                        ReactJS, Google Maps, Styled Components
                                     </p>
                                 </div>
                             </Work>
@@ -293,7 +293,7 @@ export default class About extends Component {
                                 <div class="last">
                                     <a href="https://cfkoi.herokuapp.com/">Causeforce KOI</a>
                                     <p>
-                                        <span>Angular 5</span>, Express, NodeJS, Mongodb, Mongoose, Blackbaud Luminate
+                                        Angular 5, Express, NodeJS, Mongodb, Mongoose, Blackbaud Luminate
                                     </p>
                                 </div>
                             </Work>
@@ -306,7 +306,7 @@ export default class About extends Component {
                                 <div class="last">
                                     <a href="https://secure.conquercancer.ca/to20_oci/index.html#/step-01">Online Check-In</a>
                                     <p>
-                                        <span>Angular 9</span>, NodeJs, AWS, Dataservice, Blackbaud Luminate, Material, Typescript
+                                        Angular 9, NodeJs, AWS, Dataservice, Blackbaud Luminate, Material, Typescript
                                     </p>
                                 </div>
                             </Work>
