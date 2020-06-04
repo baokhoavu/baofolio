@@ -235,19 +235,6 @@ export default class About extends Component {
                             <Work>
                                 <div class="first">
                                     <div>
-                                        <Image className="l" href="https://baoskitchen.herokuapp.com"></Image>
-                                    </div>
-                                </div>
-                                <div class="last">
-                                    <a href="https://baoskitchen.herokuapp.com">Baos Kitchen</a>
-                                    <p>
-                                        HTML, CSS, JS, Spoontacular API
-                                    </p>
-                                </div>
-                            </Work>
-                            <Work>
-                                <div class="first">
-                                    <div>
                                         <Image className="a" href="http://ride.conquercancer.ca/toronto20"></Image>
                                     </div>
                                 </div>
@@ -255,6 +242,19 @@ export default class About extends Component {
                                     <a href="http://ride.conquercancer.ca/toronto20">Ride To Conquer Cancer Toronto</a>
                                     <p>
                                         WordPress, SCSS, jQuery, Jupiter Theme, Restful API
+                                    </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
+                                    <div>
+                                        <Image className="l" href="https://baoskitchen.herokuapp.com"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://baoskitchen.herokuapp.com">Baos Kitchen</a>
+                                    <p>
+                                        HTML, CSS, JS, Spoontacular API
                                     </p>
                                 </div>
                             </Work>
