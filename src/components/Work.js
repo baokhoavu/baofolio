@@ -229,7 +229,7 @@ export default class About extends Component {
                         <div>
                             <Work className="title">
                                 <h1>
-                                    <span>Work - <a href="https://baoskitchen.herokuapp.com">Baos Kitchen</a></span>
+                                    <span>Work - <a href="https://github.com/baokhoavu">Github</a></span>
                                 </h1>
                             </Work>
                             <Work>
