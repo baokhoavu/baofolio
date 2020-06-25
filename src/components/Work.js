@@ -241,46 +241,7 @@ export default class About extends Component {
                                 <div class="last">
                                     <a href="http://ride.conquercancer.ca/toronto20">Ride To Conquer Cancer Toronto</a>
                                     <p>
-                                        WordPress, SCSS, jQuery, Jupiter Theme, Restful API
-                                    </p>
-                                </div>
-                            </Work>
-                            <Work>
-                                <div class="first">
-                                    <div>
-                                        <Image className="l" href="https://baoskitchen.herokuapp.com"></Image>
-                                    </div>
-                                </div>
-                                <div class="last">
-                                    <a href="https://baoskitchen.herokuapp.com">Baos Kitchen</a>
-                                    <p>
-                                        HTML, CSS, JS, Spoontacular API
-                                    </p>
-                                </div>
-                            </Work>
-                            <Work>
-                                <div class="first">
-                                    <div>
-                                        <Image className="k" href="https://baosum.herokuapp.com/#/tab/friends"></Image>
-                                    </div>
-                                </div>
-                                <div class="last">
-                                    <a href="https://baosum.herokuapp.com/#/tab/friends">Bao Sum Items</a>
-                                    <p>
-                                        Ionic 4, Angular, Express, CSS, JavaScript
-                                    </p>
-                                </div>
-                            </Work>
-                            <Work>
-                                <div class="first">
-                                    <div>
-                                        <Image className="j" href="https://baoplans.herokuapp.com/"></Image>
-                                    </div>
-                                </div>
-                                <div class="last">
-                                    <a href="https://baoplans.herokuapp.com/">Baoplans</a>
-                                    <p>
-                                        ReactJS, Google Maps, Styled Components
+                                        WordPress, Liquid Sage, SCSS, jQuery, Blackbaud Luminate, Restful Api
                                     </p>
                                 </div>
                             </Work>
@@ -306,7 +267,46 @@ export default class About extends Component {
                                 <div class="last">
                                     <a href="https://secure.conquercancer.ca/to20_oci/index.html#/step-01">Online Check-In</a>
                                     <p>
-                                        Angular 9, NodeJs, AWS, Dataservice, Blackbaud Luminate, Material, Typescript
+                                        Angular 9, NodeJs, AWS, RxJs, Blackbaud Luminate, Material, Typescript
+                                    </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
+                                    <div>
+                                        <Image className="j" href="https://baoplans.herokuapp.com/"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://baoplans.herokuapp.com/">Baoplans</a>
+                                    <p>
+                                        React, Google Maps Api, NodeJs, Styled Components
+                                    </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
+                                    <div>
+                                        <Image className="l" href="https://baoskitchen.herokuapp.com"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://baoskitchen.herokuapp.com">Baos Kitchen</a>
+                                    <p>
+                                        HTML, CSS, JS, Spoontacular Api
+                                    </p>
+                                </div>
+                            </Work>
+                            <Work>
+                                <div class="first">
+                                    <div>
+                                        <Image className="k" href="https://baosum.herokuapp.com/#/tab/friends"></Image>
+                                    </div>
+                                </div>
+                                <div class="last">
+                                    <a href="https://baosum.herokuapp.com/#/tab/friends">Bao Sum Items</a>
+                                    <p>
+                                        Ionic 4, Angular, Express, CSS, JavaScript
                                     </p>
                                 </div>
                             </Work>
