@@ -9,36 +9,42 @@ import '../App.css';
 
 const Navline = styled.div`
 
-
     position: fixed;
     left: 10px;
     top: 10px;
     transition: 0.4s;
     z-index: 4;
+    // background: #000;
+    // heigth: 100vh;
 
     a {
         display: block;
         text-align: center;
         width: 150px;
-        border: 2px solid #0c547d;
+        border: 2px solid #fff;
         line-height: 2.5;
+        margin: 5px 0 20px 5px;
         height: 50px;
-        color: #0c547d;
+        font-size: 18px;
+        color: #fff;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bolder;
+        transition: 0.4s;
     }
 
     a:hover {
-        border: 2px solid #09D3D8;
+        border: 2px solid #fff;
+        background: #fff;
+        color: #282c34;
     }
 
     &:hover {
-        background: #09D3D8;
+        // background: #fff;
         cursor: pointer;
 
         a {
-            color: #282c34;
+            color: ;
         }
     }
 `
@@ -57,6 +63,8 @@ export default class Home extends Component {
                     </li>
                 </ul> */}
                 <NavLink to="/">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/work">Work</NavLink>
             </Navline>
         )
     }
