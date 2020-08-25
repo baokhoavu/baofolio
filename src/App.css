@@ -9,7 +9,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: #4B79A1;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #283E51, rgb(28, 4, 59));
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #283E51, rgb(28, 4, 59));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -olinear-gradient(to top, #283E51, rgb(28, 4, 59));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
