@@ -2,7 +2,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import "../App.css";
+import ia from "../assets/A.PNG";
+import ib from "../assets/B.PNG";
+import ic from "../assets/C.PNG";
 import cloudImage from "../assets/cloud8bit.png";
+import { NavLink, Link } from "react-router-dom";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import SlideShow from "./Slideshow.js";
 
 // Container
 const Body = styled.div`
@@ -14,11 +21,40 @@ const Boxcontainer = styled.div`
 
     &:nth-child(1) {
         padding-top: 500px;
+
+        div {
+            color: rgba(137, 196, 244, 1);
+        }
     }
 
     &:nth-child(2) {
         z-index: 6;
         padding-bottom: 600px;
+        padding-top: 15px;
+
+        div:nth-child(3) a {
+            display: block;
+            text-align: center;
+            width: 150px;
+            border: 2px solid #fff;
+            line-height: 2.5;
+            margin: 5px 0 20px 5px;
+            height: 50px;
+            font-size: 18px;
+            color: #fff;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bolder;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            letter-spacing: 1px;
+
+            &:hover {
+                background: #fff;
+                color: rgb(28, 4, 59);
+            }
+        }
     }
 `;
 
@@ -37,71 +73,23 @@ const Interactivecontainer = styled.div`
         text-align: left;
         font-size: 20px;
         letter-spacing: 2px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     div a {
         color: #fff;
         text-decoration: none;
     }
-
-    // Music Box
-    // div:nth-of-type(1) {
-    //     width: 100%;
-    //     height: 100%;
-    //     display: block;
-    //     position: absolute;
-    //     opacity: 0.7;
-    //     top: 0;
-    //     background: rebeccapurple;
-    // }
-
-    // Work Box
-    div:nth-of-type(2) {
-        // background: blue;
-        height: 90vh;
-        position: absolute;
-        left: -100vw;
-        top: 5%;
-
-        &.active {
-            left: 7.5% !important;
-        }
-    }
-
-    // Resume Box
-    div:nth-of-type(3) {
-        // background: red;
-        height: 0;
-        position: absolute;
-        top: 39%;
-        right: 8%;
-
-        &.active {
-            // display: block !important;
-            height: 500px;
-        }
-    }
-
-    // Contact Box
-    div:nth-of-type(4) {
-        height: 0;
-
-        &.active {
-            // display: block !important;
-            height: 500px;
-        }
-    }
 `;
 
 // First Row
 const Box = styled.div`
-    border-left: 2px solid #0c547d;
-    border-bottom: 2px solid #0c547d;
-    // padding: 20px;
-    width: 230px;
-    height: 140px;
-    line-height: 1.9;
-    font-family: "Space Mono", monospace, "Arial";
+    text-align: left;
+    // height: 140px;
+    font-family: "Arial", monospace, "times new roman";
     font-size: 2em;
     transition: 0.75s;
     position: relative;
@@ -109,31 +97,6 @@ const Box = styled.div`
     &:hover {
         background: #09d3d8;
         color: #282c34;
-    }
-`;
-
-// Responsive Horizontal Line
-const Hline = styled.div`
-    height: 2px;
-    width: 0;
-    background: #09d3d8;
-    transition: 0.25s;
-
-    &.active {
-        width: 100%;
-    }
-`;
-// Responsive Vertical Line
-const Vline = styled.div`
-    width: 2px;
-    background: #09d3d8;
-    height: 1%;
-    float: right;
-    transition: 0.25s;
-
-    &.active {
-        background: #09d3d8;
-        // height: 100%;
     }
 `;
 
@@ -147,6 +110,10 @@ const Comment = styled.div`
         font-weight: bold;
         text-decoration: none;
     }
+
+    // div:last {
+    //     color: red;
+    // }
 
     a:hover {
         color: #09d3d8;
@@ -169,7 +136,7 @@ const Clouds = styled.div`
     min-width: 1280px;
     margin: 0 auto;
 
-    div {
+    > div {
         // background: transparent !important;
         background-image: url(${cloudImage}) !important;
         background-size: cover;
@@ -256,33 +223,229 @@ const Clouds = styled.div`
     }
 `;
 
-const TestBox = styled.div`
-    width: 100%;
-    min-height: 500px;
-    min-width: 1280px;
-    margin: 25px;
-    display: block !important;
-    position: relative !important;
-    background: linear-gradient(
-        135deg,
-        rgba(48, 43, 127, 1) 0%,
-        rgba(48, 43, 127, 1) 28%,
-        rgba(101, 44, 138, 1) 73%,
-        rgba(101, 44, 138, 1) 98%
-    );
+const Image = styled.a`
+    display: block;
+    height: 400px;
+    width: 90%;
+    margin: 2.5% auto;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-delay: 75ms;
+    z-index: 7;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    &.test {
-        opacity: 0;
+    &.a {
+        background-image: url("${ia}");
     }
 
-    &.test:hover {
-        opacity: 1;
+    &.b {
+        background-image: url("${ib}");
+    }
+
+    &.c {
+        background-image: url("${ic}");
+    }
+
+    // &:hover {
+    //     opacity: 0.5;
+    // }
+`;
+
+const BackWhite = styled.div`
+    background: #fff;
+    display: block;
+    height: 400px;
+    width: 90%;
+    margin: 2.5% auto;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-delay: 75ms;
+    z-index: 7;
+    position: relative;
+`;
+
+const Copy = styled.div`
+    width: 100% !important;
+
+    h2 {
+        display: block;
+        text-align: left;
+        margin: 0 30px;
+        font-size: 30px;
     }
 `;
 
-// Clickables const Linkable = styled.a`   padding: 0 5px;   transition: 0.5s;
-// &:nth-of-type(1) {     padding-left: 0;   }   &:hover {     cursor: pointer;
-// // letter-spacing: 2px;   } `; Home Class Component
+const TitleBox = styled.div`
+    width: 100%;
+    min-width: 1280px;
+    padding-bottom: 150px;
+    margin: 25px 25px 50px;
+    position: relative !important;
+    // border: 2px solid rgba(101, 44, 138, 1);
+    // background: linear-gradient(
+    //     135deg,
+    //     rgba(48, 43, 127, 1) 0%,
+    //     rgba(48, 43, 127, 1) 28%,
+    //     rgba(101, 44, 138, 1) 73%,
+    //     rgba(101, 44, 138, 1) 98%
+    // );
+
+    > div {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1280px) {
+        min-width: 1280px;
+    }
+
+    @media screen and (min-width: 1920px) {
+        min-width: 1920px;
+    }
+`;
+
+const TestBox = styled.div`
+    width: 100%;
+    min-height: 800px;
+    min-width: 1280px;
+    padding-bottom: 250px;
+    margin: 25px 25px 250px;
+    display: flex !important;
+    flex-wrap: wrap;
+    position: relative !important;
+    // border: 2px solid rgba(101, 44, 138, 1);
+    // background: linear-gradient(
+    //     135deg,
+    //     rgba(48, 43, 127, 1) 0%,
+    //     rgba(48, 43, 127, 1) 28%,
+    //     rgba(101, 44, 138, 1) 73%,
+    //     rgba(101, 44, 138, 1) 98%
+    // );
+
+    div {
+        flex: 0 0 33.333333%;
+        width: 33%;
+        position: relative;
+        flex: 0 0 50%;
+
+        @media screen and (min-width: 768px) {
+            flex: 0 0 33.333333%;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        min-width: 1280px;
+    }
+
+    @media screen and (min-width: 1920px) {
+        min-width: 1920px;
+    }
+`;
+
+const HoverText = styled.p`
+    position: relative;
+    top: 11px;
+    background: #fff;
+    min-height: 379px;
+    opacity: 0;
+
+    &:hover,
+    &.hover {
+        display: block;
+        opacity: 0.5;
+    }
+`;
+
+const ModalBox = styled.div`
+    min-height: 800px;
+    min-width: 1268px;
+    display: none;
+    background: #fff;
+    position: fixed !important;
+    overflow: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 25;
+
+    &.click {
+        display: block;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.unclick {
+        display: none;
+    }
+
+    @media screen and (min-width: 1300px) {
+        width: 60%;
+    }
+`;
+
+const ModalContainer = styled.div`
+    height: 100vh;
+    display: none;
+    position: fixed !important;
+    z-index: 24;
+
+    width: 100vw !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.click {
+        display: block;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.unclick {
+        display: none;
+    }
+`;
+
+const Linkable = styled.div`
+    width: 160px !important;
+    min-height: 40px;
+    position: relative !important;
+    border: 2px solid rgba(108, 122, 137, 1);
+    margin-bottom: 20px;
+    transition: 0.4s;
+
+    &:hover {
+        background: rgba(108, 122, 137, 1);
+
+        a {
+            color: #fff !important;
+        }
+    }
+
+    a {
+        position: relative !important;
+        bottom: 6px;
+        color: rgba(108, 122, 137, 1) !important;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+`;
+//  Home Class Component
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -294,32 +457,36 @@ export default class Home extends Component {
             b: false,
             c: false,
             timer: null,
+            field: null,
+            hover: false,
+            modalA: false,
         };
 
         this.hover = this.hover.bind(this);
         this.listenToScroll = this.listenToScroll.bind(this);
+        this.openModalA = this.openModalA.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.modalA = this.modalA.bind(this);
+        this.myDivToFocus = React.createRef();
     }
 
     componentDidMount() {
         // console.log("hi");
-        this.listenToScroll();
     }
 
     listenToScroll = () => {
-        console.log("testerr");
-
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop;
-
-        const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight;
-
-        const scrolled = winScroll / height;
-
-        this.setState({ position: scrolled });
-
-        console.log(this.state.position);
+        // console.log("testerr"); const winScroll =     document.body.scrollTop ||
+        // document.documentElement.scrollTop; const height =
+        // document.documentElement.scrollHeight -
+        // document.documentElement.clientHeight; const scrolled = winScroll / height;
+        // this.setState({ position: scrolled }); console.log(this.state.position);
+        // .current is verification that your element has rendered
+        if (this.myDivToFocus.current) {
+            this.myDivToFocus.current.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+            });
+        }
     };
 
     // Hover functionality
@@ -347,9 +514,25 @@ export default class Home extends Component {
                 this.setState({ d: false });
             }, 5000);
         }
+    }
 
-        // else if (e.target.className.indexOf('deedee') > -1) {
-        // clearTimeout(this.state.timer)     console.log('hi') }
+    hoverB() {
+        this.setState((prevHover) => ({ hover: prevHover.hover }));
+
+        console.log(this.hover);
+    }
+
+    openModalA() {
+        this.setState(() => ({ modalA: true }));
+    }
+
+    closeModal() {
+        this.setState(() => ({ modalA: false }));
+    }
+
+    modalA() {
+        console.log("we have liftoff");
+        this.setState(() => ({ modalA: true }));
     }
 
     render() {
@@ -364,140 +547,134 @@ export default class Home extends Component {
                                     onMouseEnter={this.hover}
                                     onMouseLeave={this.hover}
                                 >
-                                    <Hline
-                                        className={
-                                            this.state.active ? "active" : null
-                                        }
-                                    ></Hline>
-                                    Bao
-                                    <Vline
-                                        className={
-                                            this.state.active ? "active" : null
-                                        }
-                                    ></Vline>
+                                    Baokhoa Vu
                                 </Box>
                             </Boxcontainer>
 
                             <Boxcontainer>
                                 <Comment>
-                                    Full Stack - Web Developer ( Los Angeles )
+                                    Lead Developer [ Based in Los Angeles ]
                                 </Comment>
 
                                 <Comment>
                                     <p>(626) 367-3112</p>
                                     <p>baokhoadinhvu@gmail.com</p>
                                 </Comment>
+                                <Comment>
+                                    <NavLink
+                                        to="#work"
+                                        onClick={this.listenToScroll}
+                                    >
+                                        Work
+                                    </NavLink>
+                                </Comment>
                             </Boxcontainer>
 
                             {/* Live Events */}
                             <Interactivecontainer>
                                 <div></div>
-                                <div
-                                    className={
-                                        "bee " +
-                                        (this.state.b ? "active" : null)
-                                    }
-                                >
-                                    <p>
-                                        <img
-                                            height="300"
-                                            width="auto"
-                                            src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
-                                        />
-                                        <br />
-                                        <a href="#">Flowers</a>
-                                        <br />
-                                        ReactJS - Redux - Express - Mongodb
-                                    </p>
-                                    <p>
-                                        <img
-                                            height="300"
-                                            width="auto"
-                                            src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
-                                        />
-                                        <br />
-                                        <a href="#">Flowers</a>
-                                        <br />
-                                        ReactJS - Redux - Express - Mongodb
-                                    </p>
-                                    <p>
-                                        <img
-                                            height="300"
-                                            width="auto"
-                                            src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
-                                        />
-                                        <br />
-                                        <a href="#">Flowers</a>
-                                        <br />
-                                        ReactJS - Redux - Express - Mongodb
-                                    </p>
-                                </div>
-                                <div
-                                    className={
-                                        "cee " +
-                                        (this.state.c ? "active" : null)
-                                    }
-                                ></div>
-                                <div
-                                    onMouseEnter={this.hover}
-                                    className={
-                                        "deedee " +
-                                        (this.state.d ? "active" : null)
-                                    }
-                                >
-                                    <p>Phone - (626) 367-3112</p>
-                                    <p>
-                                        Email -{" "}
-                                        <a href="mailto:baokhoadinhvu@gmail.com">
-                                            baokhoadinhvu@gmail.com
-                                        </a>
-                                    </p>
-                                    <p>
-                                        Linkedin -{" "}
-                                        <a href="https://www.linkedin.com/in/baokhoadvu/">
-                                            Baokhoa
-                                        </a>
-                                    </p>
-                                </div>
                                 <Clouds>
                                     <div></div>
                                     <div></div>
                                     <div></div>
                                 </Clouds>
+                                <TitleBox>
+                                    <div>
+                                        <h2>Projects</h2>
+                                    </div>
+                                </TitleBox>
                                 <TestBox
                                     className={
                                         "test a" +
                                         (this.state.animate ? "slide" : null)
                                     }
+                                    id="work"
+                                    ref={this.myDivToFocus}
                                     onMouseEnter={this.listenToScroll}
                                 >
-                                    <h2>TEST</h2>
+                                    <div>
+                                        <Image className="a">
+                                            <HoverText
+                                                onMouseEnter={this.hoverb}
+                                                onMouseLeave={this.hoverb}
+                                                onClick={this.openModalA}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            ></HoverText>
+                                        </Image>
+                                        <Copy>Ride Toronto 2020</Copy>
+                                    </div>
+                                    <div>
+                                        <Image className="b">
+                                            <HoverText
+                                                onMouseEnter={this.hoverb}
+                                                onMouseLeave={this.hoverb}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            ></HoverText>
+                                        </Image>
+                                        <Copy>Ride Toronto 2020</Copy>
+                                    </div>
+                                    <div>
+                                        <Image
+                                            className="a"
+                                            href="http://ride.conquercancer.ca/toronto20"
+                                        ></Image>
+                                    </div>
                                 </TestBox>
-                                <TestBox>
-                                    <h2>TEST</h2>
-                                </TestBox>
-                                <TestBox>
-                                    <h2>TEST</h2>
-                                </TestBox>
-                                <TestBox>
-                                    <h2>TEST</h2>
-                                </TestBox>
+                                <ModalBox
+                                    onClick={this.modalA}
+                                    className={
+                                        this.state.modalA ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideShow></SlideShow>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>Ride Toronto 2020</h2>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://ride.conquercancer.ca/toronto20">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Wordpress, Liquid, Sage, Ajax,
+                                                Api, Scheduler, vanilla jS,
+                                                Scss, jQuery, php, Blackbaud
+                                                Luminate, Convio
+                                            </p>
+                                            <p className="copy">
+                                                Full multi-page website built
+                                                into a reuseable template
+                                                pulling and saving preservable
+                                                data. Incorporating custom
+                                                functionality and responsive
+                                                designs, we help promote
+                                                existing and new resources
+                                                offered. Data is represented
+                                                using live api intergration with
+                                                custom rules based on requests.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ModalBox>
+                                <ModalContainer
+                                    onClick={this.closeModal}
+                                    className={
+                                        this.state.modalA ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
                             </Interactivecontainer>
-                            {/* <TestBox>
-                <h2>TEST</h2>
-              </TestBox>
-              <TestBox>
-                <h2>TEST</h2>
-              </TestBox>
-              <TestBox>
-                <h2>TEST</h2>
-              </TestBox>
-              <TestBox>
-                <h2>TEST</h2>
-              </TestBox>
-              <TestBox>
-                <h2>TEST</h2>
-              </TestBox> */}
                         </header>
                     </div>
                 </Body>

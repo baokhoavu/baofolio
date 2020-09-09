@@ -89,7 +89,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter basename={"/testindex"}>
+                <BrowserRouter basename={"/"}>
                     <div>
                         <Background>
                             <ParticleComponent />
@@ -103,12 +103,12 @@ export default class App extends Component {
                                 <Route component={Error} />
                             </Switch>
                         </Container>
-                        <Houses className={this.state.animate ? "slide" : ""}>
+                        {/* <Houses className={this.state.animate ? "slide" : ""}>
                             <div
                                 alt="abc"
                                 onError="this.style.display='none'"
                             />
-                        </Houses>
+                        </Houses> */}
                     </div>
                 </BrowserRouter>
                 {/* <Nav /> */}
