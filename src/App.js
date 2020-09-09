@@ -89,7 +89,7 @@ export default class App extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter basename={"/"}>
+                <BrowserRouter>
                     <div>
                         <Background>
                             <ParticleComponent />
