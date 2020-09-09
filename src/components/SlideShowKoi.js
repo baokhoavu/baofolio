@@ -1,15 +1,13 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
 import { Fade } from "react-slideshow-image";
 import styled from "styled-components";
 // import "react-slideshow-image/dist/styles.css";
-import a from "../assets/rcto/1.PNG";
-import b from "../assets/rcto/2.PNG";
-import c from "../assets/rcto/3.PNG";
-import d from "../assets/rcto/4.PNG";
-import e from "../assets/rcto/5.PNG";
+import a from "../assets/koi/1.PNG";
+import b from "../assets/koi/2.PNG";
+import c from "../assets/koi/3.PNG";
+import d from "../assets/koi/4.PNG";
 
-const slideImages = [a, b, c, d, e];
+const slideImages = [a, b, c, d];
 
 const SlideImage = styled.img`
     &.a {
@@ -27,13 +25,9 @@ const SlideImage = styled.img`
     &.d {
         background-image: url(${d});
     }
-
-    &.e {
-        background-image: url(${e});
-    }
 `;
 
-const Slideshow = () => {
+const SlideShowKoi = () => {
     return (
         <div className="slide-container">
             <Fade>
@@ -61,15 +55,9 @@ const Slideshow = () => {
                     </div>
                     <h2>Fourth Slide</h2>
                 </div>
-                <div className="each-fade">
-                    <div className="image-container">
-                        <SlideImage className="e" />
-                    </div>
-                    <h2>Fifth Slide</h2>
-                </div>
             </Fade>
         </div>
     );
 };
 
-export default Slideshow;
+export default SlideShowKoi;

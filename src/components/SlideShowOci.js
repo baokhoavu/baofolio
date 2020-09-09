@@ -1,13 +1,12 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
 import { Fade } from "react-slideshow-image";
 import styled from "styled-components";
 // import "react-slideshow-image/dist/styles.css";
-import a from "../assets/rcto/1.PNG";
-import b from "../assets/rcto/2.PNG";
-import c from "../assets/rcto/3.PNG";
-import d from "../assets/rcto/4.PNG";
-import e from "../assets/rcto/5.PNG";
+import a from "../assets/oci/1.PNG";
+import b from "../assets/oci/2.PNG";
+import c from "../assets/oci/3.PNG";
+import d from "../assets/oci/4.PNG";
+import e from "../assets/oci/5.PNG";
 
 const slideImages = [a, b, c, d, e];
 
@@ -33,7 +32,7 @@ const SlideImage = styled.img`
     }
 `;
 
-const Slideshow = () => {
+const SlideShowOci = () => {
     return (
         <div className="slide-container">
             <Fade>
@@ -72,4 +71,4 @@ const Slideshow = () => {
     );
 };
 
-export default Slideshow;
+export default SlideShowOci;

@@ -10,7 +10,8 @@ import { NavLink, Link } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import SlideShow from "./Slideshow.js";
-
+import SlideShowOci from "./SlideShowOci.js";
+import SlideshowKoi from "./SlideShowKoi.js";
 // Container
 const Body = styled.div`
     // background-color: #282c34;
@@ -76,6 +77,10 @@ const Interactivecontainer = styled.div`
 
         &:hover {
             cursor: pointer;
+        }
+
+        @media screen and (max-width: 1280px) {
+            font-size: 17px;
         }
     }
 
@@ -334,10 +339,19 @@ const TestBox = styled.div`
         flex: 0 0 33.333333%;
         width: 33%;
         position: relative;
-        flex: 0 0 50%;
+        // flex: 0 0 50%;
 
-        @media screen and (min-width: 768px) {
-            flex: 0 0 33.333333%;
+        @media screen and (max-width: 1600px) {
+            flex: 0 0 50%;
+            width: 50%;
+        }
+
+        @media screen and (max-width: 1280px) {
+            flex: 0 0 100%;
+            display: block;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
     }
 
@@ -356,6 +370,10 @@ const HoverText = styled.p`
     background: #fff;
     min-height: 379px;
     opacity: 0;
+    text-align: center !important;
+    color: rgba(46, 49, 49, 1) !important;
+    line-height: 18;
+    font-weight: bold;
 
     &:hover,
     &.hover {
@@ -366,7 +384,7 @@ const HoverText = styled.p`
 
 const ModalBox = styled.div`
     min-height: 800px;
-    min-width: 1268px;
+    width: 60% !important;
     display: none;
     background: #fff;
     position: fixed !important;
@@ -380,16 +398,16 @@ const ModalBox = styled.div`
         display: block;
     }
 
-    &:hover {
-        cursor: pointer;
-    }
+    // &:hover {
+    //     cursor: pointer;
+    // }
 
     &.unclick {
         display: none;
     }
 
     @media screen and (min-width: 1300px) {
-        width: 60%;
+        min-width: 1268px;
     }
 `;
 
@@ -398,7 +416,8 @@ const ModalContainer = styled.div`
     display: none;
     position: fixed !important;
     z-index: 24;
-
+    // background: #fff;
+    // opacity: 0.7;
     width: 100vw !important;
     top: 50%;
     left: 50%;
@@ -435,10 +454,24 @@ const Linkable = styled.div`
 
     a {
         position: relative !important;
-        bottom: 6px;
         color: rgba(108, 122, 137, 1) !important;
         font-weight: bold;
         font-size: 16px;
+        width: 160px !important;
+        min-height: 40px;
+        display: block;
+        line-height: 3;
+        z-index: 5;
+    }
+
+    &.link {
+        margin: 0 auto;
+        background: rgba(137, 196, 244, 1);
+        color: rgb(28, 4, 59) !important;
+
+        &:hover {
+            color: rgba(137, 196, 244, 1) !important;
+        }
     }
 
     a:hover {
@@ -460,13 +493,21 @@ export default class Home extends Component {
             field: null,
             hover: false,
             modalA: false,
+            modalB: false,
+            modalC: false,
         };
 
         this.hover = this.hover.bind(this);
         this.listenToScroll = this.listenToScroll.bind(this);
         this.openModalA = this.openModalA.bind(this);
-        this.closeModal = this.closeModal.bind(this);
+        this.openModalB = this.openModalB.bind(this);
+        this.openModalC = this.openModalC.bind(this);
+        this.closeModalA = this.closeModalA.bind(this);
+        this.closeModalB = this.closeModalB.bind(this);
+        this.closeModalC = this.closeModalC.bind(this);
         this.modalA = this.modalA.bind(this);
+        this.modalB = this.modalB.bind(this);
+        this.modalC = this.modalC.bind(this);
         this.myDivToFocus = React.createRef();
     }
 
@@ -526,13 +567,36 @@ export default class Home extends Component {
         this.setState(() => ({ modalA: true }));
     }
 
-    closeModal() {
+    openModalB() {
+        this.setState(() => ({ modalB: true }));
+    }
+
+    openModalC() {
+        this.setState(() => ({ modalC: true }));
+    }
+
+    closeModalA() {
         this.setState(() => ({ modalA: false }));
     }
 
+    closeModalB() {
+        this.setState(() => ({ modalB: false }));
+    }
+
+    closeModalC() {
+        this.setState(() => ({ modalC: false }));
+    }
+
     modalA() {
-        console.log("we have liftoff");
         this.setState(() => ({ modalA: true }));
+    }
+
+    modalB() {
+        this.setState(() => ({ modalB: true }));
+    }
+
+    modalC() {
+        this.setState(() => ({ modalC: true }));
     }
 
     render() {
@@ -603,29 +667,57 @@ export default class Home extends Component {
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            ></HoverText>
+                                            >
+                                                Learn More
+                                            </HoverText>
                                         </Image>
-                                        <Copy>Ride Toronto 2020</Copy>
+                                        <Linkable className="link">
+                                            <a href="https://ride.conquercancer.ca/toronto20">
+                                                View Website
+                                            </a>
+                                        </Linkable>
                                     </div>
                                     <div>
                                         <Image className="b">
                                             <HoverText
                                                 onMouseEnter={this.hoverb}
                                                 onMouseLeave={this.hoverb}
+                                                onClick={this.openModalB}
                                                 className={
                                                     this.state.hovered
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            ></HoverText>
+                                            >
+                                                Learn More
+                                            </HoverText>
                                         </Image>
-                                        <Copy>Ride Toronto 2020</Copy>
+                                        <Linkable className="link">
+                                            <a href="https://baokhoavu.com/ab20_oci">
+                                                View Website
+                                            </a>
+                                        </Linkable>
                                     </div>
                                     <div>
-                                        <Image
-                                            className="a"
-                                            href="http://ride.conquercancer.ca/toronto20"
-                                        ></Image>
+                                        <Image className="c">
+                                            <HoverText
+                                                onMouseEnter={this.hoverc}
+                                                onMouseLeave={this.hoverc}
+                                                onClick={this.openModalC}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            >
+                                                Learn More
+                                            </HoverText>
+                                        </Image>
+                                        <Linkable className="link">
+                                            <a href="https://cfkoi.herokuapp.com">
+                                                View Website
+                                            </a>
+                                        </Linkable>
                                     </div>
                                 </TestBox>
                                 <ModalBox
@@ -656,22 +748,118 @@ export default class Home extends Component {
                                             <p className="copy">
                                                 Full multi-page website built
                                                 into a reuseable template
-                                                pulling and saving preservable
-                                                data. Incorporating custom
+                                                pulling and saving live event
+                                                data. Developed including custom
                                                 functionality and responsive
-                                                designs, we help promote
-                                                existing and new resources
-                                                offered. Data is represented
-                                                using live api intergration with
-                                                custom rules based on requests.
+                                                designs, we help promote new and
+                                                existing services provided. Data
+                                                is represented using live api
+                                                intergration with multiple
+                                                platforms.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ModalBox>
+                                <ModalBox
+                                    onClick={this.modalB}
+                                    className={
+                                        this.state.modalB ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideShowOci></SlideShowOci>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>
+                                                Ride Alberta Online Check In
+                                            </h2>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://cfkoi.herokuapp.com">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Angular 9, Scss, Express,
+                                                Typescript, Material, RxJS,
+                                                Dataservice, Blackbaud Luminate,
+                                                Convio,
+                                            </p>
+                                            <p className="copy">
+                                                Multi page web application
+                                                developed in order to record
+                                                transactions and user
+                                                information connected to a live
+                                                fundraising database. This app
+                                                also has live data binding for
+                                                revisiting as well as validation
+                                                from both material and custom
+                                                inhouse. Templated into a client
+                                                or server included app in order
+                                                to meet fundraising brief
+                                                requirements.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ModalBox>
+                                <ModalBox
+                                    onClick={this.modalC}
+                                    className={
+                                        this.state.modalC ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideshowKoi></SlideshowKoi>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>Causeforce KOI</h2>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://cfkoi.herokuapp.com">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Angular 5, Mongodb, Mongoose,
+                                                Express, Promise, NodeJs,
+                                                Blackbaud Luminate, Convio,
+                                                momentjs
+                                            </p>
+                                            <p className="copy">
+                                                Multi page web application
+                                                developed in display fundraising
+                                                values in real time. This also
+                                                records a daily snapshot in
+                                                order to preserve data for
+                                                analysis. Connected to Blackbaud
+                                                Luminate's fundraising platform,
+                                                we process and save here in
+                                                order to re-render on other
+                                                platforms if needed.
                                             </p>
                                         </div>
                                     </div>
                                 </ModalBox>
                                 <ModalContainer
-                                    onClick={this.closeModal}
+                                    onClick={this.closeModalA}
                                     className={
                                         this.state.modalA ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
+                                <ModalContainer
+                                    onClick={this.closeModalB}
+                                    className={
+                                        this.state.modalB ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
+                                <ModalContainer
+                                    onClick={this.closeModalC}
+                                    className={
+                                        this.state.modalC ? "click" : "unclick"
                                     }
                                 ></ModalContainer>
                             </Interactivecontainer>

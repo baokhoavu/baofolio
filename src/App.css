@@ -52,7 +52,7 @@
 }
 
 .image-container img {
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -107,4 +107,11 @@
 	margin-top: 0.5%;
 	font-size: 16px;
 	color: rgba(46, 49, 49, 1);
+
+}
+
+@media screen and (max-width: 1240px) {
+	.slide-descrip div p.copy {
+		font-size: 14px;
+	}
 }
