@@ -443,8 +443,8 @@ const ModalContainer = styled.div`
     display: none;
     position: fixed !important;
     z-index: 24;
-    // background: #fff;
-    // opacity: 0.7;
+    background: #000;
+    opacity: 0.75;
     width: 100vw !important;
     top: 50%;
     left: 50%;
