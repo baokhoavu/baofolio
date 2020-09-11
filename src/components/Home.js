@@ -5,13 +5,19 @@ import "../App.css";
 import ia from "../assets/A.PNG";
 import ib from "../assets/B.PNG";
 import ic from "../assets/C.PNG";
+import id from "../assets/D.PNG";
+import ie from "../assets/N.PNG";
+import ig from "../assets/O.PNG";
 import cloudImage from "../assets/cloud8bit.png";
 import { NavLink, Link } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import SlideShow from "./Slideshow.js";
 import SlideShowOci from "./SlideShowOci.js";
-import SlideshowKoi from "./SlideShowKoi.js";
+import SlideShowKoi from "./SlideShowKoi.js";
+import SlideshowCf from "./SlideShowCf.js";
+import SlideShowChoc from "./SlideShowChoc.js";
+import SlideShowCcrf from "./SlideShowCcrf.js";
 // Container
 const Body = styled.div`
     // background-color: #282c34;
@@ -68,6 +74,7 @@ const Interactivecontainer = styled.div`
         position: absolute;
         transition: 0.75s;
         overflow: hidden;
+        text-align: left;
     }
 
     div p {
@@ -85,6 +92,7 @@ const Interactivecontainer = styled.div`
     }
 
     div a {
+        text-align: center;
         color: #fff;
         text-decoration: none;
     }
@@ -231,8 +239,10 @@ const Clouds = styled.div`
 const Image = styled.a`
     display: block;
     height: 400px;
-    width: 90%;
-    margin: 2.5% auto;
+    width: 100%;
+    border-left: 0.5px solid #000;
+    border-right: 0.5px solid #000;
+    border-bottom: 0.5px solid #000;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     background-size: cover;
@@ -255,6 +265,18 @@ const Image = styled.a`
 
     &.c {
         background-image: url("${ic}");
+    }
+
+    &.d {
+        background-image: url("${id}");
+    }
+
+    &.e {
+        background-image: url("${ie}");
+    }
+
+    &.f {
+        background-image: url("${ig}");
     }
 
     // &:hover {
@@ -366,14 +388,15 @@ const TestBox = styled.div`
 
 const HoverText = styled.p`
     position: relative;
-    top: 11px;
+    top: 0px;
     background: #fff;
-    min-height: 379px;
+    min-height: 400px;
     opacity: 0;
     text-align: center !important;
     color: rgba(46, 49, 49, 1) !important;
     line-height: 18;
     font-weight: bold;
+    margin: 0;
 
     &:hover,
     &.hover {
@@ -443,6 +466,8 @@ const Linkable = styled.div`
     border: 2px solid rgba(108, 122, 137, 1);
     margin-bottom: 20px;
     transition: 0.4s;
+    margin-right: 25px;
+    display: inline-block;
 
     &:hover {
         background: rgba(108, 122, 137, 1);
@@ -495,6 +520,9 @@ export default class Home extends Component {
             modalA: false,
             modalB: false,
             modalC: false,
+            modalD: false,
+            modalE: false,
+            modalF: false,
         };
 
         this.hover = this.hover.bind(this);
@@ -502,12 +530,21 @@ export default class Home extends Component {
         this.openModalA = this.openModalA.bind(this);
         this.openModalB = this.openModalB.bind(this);
         this.openModalC = this.openModalC.bind(this);
+        this.openModalD = this.openModalD.bind(this);
+        this.openModalE = this.openModalE.bind(this);
+        this.openModalF = this.openModalF.bind(this);
         this.closeModalA = this.closeModalA.bind(this);
         this.closeModalB = this.closeModalB.bind(this);
         this.closeModalC = this.closeModalC.bind(this);
+        this.closeModalD = this.closeModalD.bind(this);
+        this.closeModalE = this.closeModalE.bind(this);
+        this.closeModalF = this.closeModalF.bind(this);
         this.modalA = this.modalA.bind(this);
         this.modalB = this.modalB.bind(this);
         this.modalC = this.modalC.bind(this);
+        this.modalD = this.modalD.bind(this);
+        this.modalE = this.modalE.bind(this);
+        this.modalF = this.modalF.bind(this);
         this.myDivToFocus = React.createRef();
     }
 
@@ -566,37 +603,58 @@ export default class Home extends Component {
     openModalA() {
         this.setState(() => ({ modalA: true }));
     }
-
     openModalB() {
         this.setState(() => ({ modalB: true }));
     }
-
     openModalC() {
         this.setState(() => ({ modalC: true }));
+    }
+    openModalD() {
+        this.setState(() => ({ modalD: true }));
+    }
+    openModalE() {
+        this.setState(() => ({ modalE: true }));
+    }
+    openModalF() {
+        this.setState(() => ({ modalF: true }));
     }
 
     closeModalA() {
         this.setState(() => ({ modalA: false }));
     }
-
     closeModalB() {
         this.setState(() => ({ modalB: false }));
     }
-
     closeModalC() {
         this.setState(() => ({ modalC: false }));
+    }
+    closeModalD() {
+        this.setState(() => ({ modalD: false }));
+    }
+    closeModalE() {
+        this.setState(() => ({ modalE: false }));
+    }
+    closeModalF() {
+        this.setState(() => ({ modalF: false }));
     }
 
     modalA() {
         this.setState(() => ({ modalA: true }));
     }
-
     modalB() {
         this.setState(() => ({ modalB: true }));
     }
-
     modalC() {
         this.setState(() => ({ modalC: true }));
+    }
+    modalD() {
+        this.setState(() => ({ modalD: true }));
+    }
+    modalE() {
+        this.setState(() => ({ modalE: true }));
+    }
+    modalF() {
+        this.setState(() => ({ modalF: true }));
     }
 
     render() {
@@ -608,6 +666,7 @@ export default class Home extends Component {
                             <Boxcontainer>
                                 <Box
                                     className="box"
+                                    id="home"
                                     onMouseEnter={this.hover}
                                     onMouseLeave={this.hover}
                                 >
@@ -644,7 +703,7 @@ export default class Home extends Component {
                                 </Clouds>
                                 <TitleBox>
                                     <div>
-                                        <h2>Projects</h2>
+                                        <h2>Work</h2>
                                     </div>
                                 </TitleBox>
                                 <TestBox
@@ -671,11 +730,11 @@ export default class Home extends Component {
                                                 Learn More
                                             </HoverText>
                                         </Image>
-                                        <Linkable className="link">
+                                        {/* <Linkable className="link">
                                             <a href="https://ride.conquercancer.ca/toronto20">
                                                 View Website
                                             </a>
-                                        </Linkable>
+                                        </Linkable> */}
                                     </div>
                                     <div>
                                         <Image className="b">
@@ -692,11 +751,6 @@ export default class Home extends Component {
                                                 Learn More
                                             </HoverText>
                                         </Image>
-                                        <Linkable className="link">
-                                            <a href="https://baokhoavu.com/ab20_oci">
-                                                View Website
-                                            </a>
-                                        </Linkable>
                                     </div>
                                     <div>
                                         <Image className="c">
@@ -713,11 +767,54 @@ export default class Home extends Component {
                                                 Learn More
                                             </HoverText>
                                         </Image>
-                                        <Linkable className="link">
-                                            <a href="https://cfkoi.herokuapp.com">
-                                                View Website
-                                            </a>
-                                        </Linkable>
+                                    </div>
+                                    <div>
+                                        <Image className="d">
+                                            <HoverText
+                                                onMouseEnter={this.hoverd}
+                                                onMouseLeave={this.hoverd}
+                                                onClick={this.openModalD}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            >
+                                                Learn More
+                                            </HoverText>
+                                        </Image>
+                                    </div>
+                                    <div>
+                                        <Image className="e">
+                                            <HoverText
+                                                onMouseEnter={this.hovere}
+                                                onMouseLeave={this.hovere}
+                                                onClick={this.openModalE}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            >
+                                                Learn More
+                                            </HoverText>
+                                        </Image>
+                                    </div>
+                                    <div>
+                                        <Image className="f">
+                                            <HoverText
+                                                onMouseEnter={this.hoverf}
+                                                onMouseLeave={this.hoverf}
+                                                onClick={this.openModalF}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            >
+                                                Learn More
+                                            </HoverText>
+                                        </Image>
                                     </div>
                                 </TestBox>
                                 <ModalBox
@@ -735,6 +832,11 @@ export default class Home extends Component {
                                             <Linkable>
                                                 <a href="https://ride.conquercancer.ca/toronto20">
                                                     View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://bitbucket.org/baokhoa/to20_oci">
+                                                    View Work
                                                 </a>
                                             </Linkable>
                                         </div>
@@ -775,8 +877,13 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <Linkable>
-                                                <a href="https://cfkoi.herokuapp.com">
+                                                <a href="https://baokhoavu.com/ab20_oci">
                                                     View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://bitbucket.org/baokhoa/ab20_oci">
+                                                    View Work
                                                 </a>
                                             </Linkable>
                                         </div>
@@ -810,7 +917,7 @@ export default class Home extends Component {
                                         this.state.modalC ? "click" : "unclick"
                                     }
                                 >
-                                    <SlideshowKoi></SlideshowKoi>
+                                    <SlideShowKoi></SlideShowKoi>
                                     <div className="slide-descrip">
                                         <div>
                                             <h2>Causeforce KOI</h2>
@@ -819,6 +926,11 @@ export default class Home extends Component {
                                             <Linkable>
                                                 <a href="https://cfkoi.herokuapp.com">
                                                     View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://bitbucket.org/baokhoa/koi">
+                                                    View Work
                                                 </a>
                                             </Linkable>
                                         </div>
@@ -844,6 +956,127 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                 </ModalBox>
+                                <ModalBox
+                                    onClick={this.modalD}
+                                    className={
+                                        this.state.modalD ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideshowCf></SlideshowCf>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>Causeforce</h2>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://causeforce.com/">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://bitbucket.org/baokhoa/causeforce">
+                                                    View Work
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                WordPress Sage, Gulp, Php, Ajax
+                                            </p>
+                                            <p className="copy">
+                                                Multi page web site developed in
+                                                order to advertise and promote
+                                                our services as well as job
+                                                openings. Maitenance year long
+                                                that includes style changes
+                                                collaborated with design and UX.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ModalBox>
+                                <ModalBox
+                                    onClick={this.modalE}
+                                    className={
+                                        this.state.modalE ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideShowCcrf></SlideShowCcrf>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>
+                                                Children's Cancer Research Fund
+                                            </h2>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://childrenscancer.org/">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Blackbaud Luminate, Html, CSS,
+                                                Bootstrap, vanilla Js, jQuery,
+                                                Restful Api, Php
+                                            </p>
+                                            <p className="copy">
+                                                Re-developed the home page as
+                                                well as other landing pages
+                                                incorporating latest responsive
+                                                web designs. This included
+                                                updating their assets and
+                                                highlighting key features
+                                                already existing on the site. We
+                                                also added tracking for
+                                                analytics. Custom functionality
+                                                that incorporated Blackbaud
+                                                Luminates API for out of the box
+                                                plugins.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ModalBox>
+                                <ModalBox
+                                    onClick={this.modalF}
+                                    className={
+                                        this.state.modalF ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideShowChoc></SlideShowChoc>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>
+                                                CHOC Children's - Children's
+                                                Hospital of Orange County
+                                            </h2>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://www.chocwalk.org/">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Rallybound, Html, SCSS, vanilla
+                                                Js
+                                            </p>
+                                            <p className="copy">
+                                                Re-developed campaign and
+                                                landing pages alongside the
+                                                client and Design/UX in order to
+                                                include latest web designs.
+                                                Custom responsive design is
+                                                created per web site tailoring
+                                                to target every page and
+                                                templated to be reused for
+                                                future events.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ModalBox>
                                 <ModalContainer
                                     onClick={this.closeModalA}
                                     className={
@@ -860,6 +1093,24 @@ export default class Home extends Component {
                                     onClick={this.closeModalC}
                                     className={
                                         this.state.modalC ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
+                                <ModalContainer
+                                    onClick={this.closeModalD}
+                                    className={
+                                        this.state.modalD ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
+                                <ModalContainer
+                                    onClick={this.closeModalE}
+                                    className={
+                                        this.state.modalE ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
+                                <ModalContainer
+                                    onClick={this.closeModalF}
+                                    className={
+                                        this.state.modalF ? "click" : "unclick"
                                     }
                                 ></ModalContainer>
                             </Interactivecontainer>

@@ -49,6 +49,16 @@ const Navline = styled.div`
 `;
 // Home Class Component
 export default class Home extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    // this.top = this.top.bind(this);
+
+    top() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <Navline>
@@ -60,7 +70,9 @@ export default class Home extends Component {
                         <NavLink to="/about">About</NavLink>
                     </li>
                 </ul> */}
-                <NavLink to="/">Home</NavLink>
+                <NavLink onClick={this.top} to="/">
+                    Home
+                </NavLink>
                 <NavLink to="/about">About</NavLink>
                 {/* <NavLink to="/work">Work</NavLink> */}
             </Navline>
