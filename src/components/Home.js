@@ -330,6 +330,10 @@ const TitleBox = styled.div`
         width: 100%;
     }
 
+    h2 {
+        color: rgba(137, 196, 244, 1);
+    }
+
     @media screen and (min-width: 1280px) {
         min-width: 1280px;
     }
@@ -829,22 +833,10 @@ export default class Home extends Component {
                                             <h2>Ride Toronto 2020</h2>
                                         </div>
                                         <div>
-                                            <Linkable>
-                                                <a href="https://ride.conquercancer.ca/toronto20">
-                                                    View Website
-                                                </a>
-                                            </Linkable>
-                                            <Linkable>
-                                                <a href="https://bitbucket.org/baokhoa/to20_oci">
-                                                    View Work
-                                                </a>
-                                            </Linkable>
-                                        </div>
-                                        <div>
                                             <p>
                                                 Wordpress, Liquid, Sage, Ajax,
-                                                Api, Scheduler, vanilla jS,
-                                                Scss, jQuery, php, Blackbaud
+                                                Restful Api, Scheduler, vanilla
+                                                jS, Scss, jQuery, php, Blackbaud
                                                 Luminate, Convio
                                             </p>
                                             <p className="copy">
@@ -860,6 +852,37 @@ export default class Home extends Component {
                                                 platforms.
                                             </p>
                                         </div>
+                                        <div>
+                                            {/* <p>
+                                                Wordpress, Liquid, Sage, Ajax,
+                                                Restful Api, Scheduler, vanilla
+                                                jS, Scss, jQuery, php, Blackbaud
+                                                Luminate, Convio
+                                            </p>
+                                            <p className="copy">
+                                                Full multi-page website built
+                                                into a reuseable template
+                                                pulling and saving live event
+                                                data. Developed including custom
+                                                functionality and responsive
+                                                designs, we help promote new and
+                                                existing services provided. Data
+                                                is represented using live api
+                                                intergration with multiple
+                                                platforms.
+                                        
+										    </p> */}
+                                            <Linkable>
+                                                <a href="https://ride.conquercancer.ca/toronto20">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://bitbucket.org/baokhoa/to20_oci">
+                                                    View Work
+                                                </a>
+                                            </Linkable>
+                                        </div>
                                     </div>
                                 </ModalBox>
                                 <ModalBox
@@ -874,18 +897,6 @@ export default class Home extends Component {
                                             <h2>
                                                 Ride Alberta Online Check In
                                             </h2>
-                                        </div>
-                                        <div>
-                                            <Linkable>
-                                                <a href="https://baokhoavu.com/ab20_oci">
-                                                    View Website
-                                                </a>
-                                            </Linkable>
-                                            <Linkable>
-                                                <a href="https://bitbucket.org/baokhoa/ab20_oci">
-                                                    View Work
-                                                </a>
-                                            </Linkable>
                                         </div>
                                         <div>
                                             <p>
@@ -909,6 +920,18 @@ export default class Home extends Component {
                                                 requirements.
                                             </p>
                                         </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://baokhoavu.com/ab20_oci">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://bitbucket.org/baokhoa/ab20_oci">
+                                                    View Work
+                                                </a>
+                                            </Linkable>
+                                        </div>
                                     </div>
                                 </ModalBox>
                                 <ModalBox
@@ -921,18 +944,6 @@ export default class Home extends Component {
                                     <div className="slide-descrip">
                                         <div>
                                             <h2>Causeforce KOI</h2>
-                                        </div>
-                                        <div>
-                                            <Linkable>
-                                                <a href="https://cfkoi.herokuapp.com">
-                                                    View Website
-                                                </a>
-                                            </Linkable>
-                                            <Linkable>
-                                                <a href="https://bitbucket.org/baokhoa/koi">
-                                                    View Work
-                                                </a>
-                                            </Linkable>
                                         </div>
                                         <div>
                                             <p>
@@ -954,6 +965,18 @@ export default class Home extends Component {
                                                 platforms if needed.
                                             </p>
                                         </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://cfkoi.herokuapp.com">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://bitbucket.org/baokhoa/koi">
+                                                    View Work
+                                                </a>
+                                            </Linkable>
+                                        </div>
                                     </div>
                                 </ModalBox>
                                 <ModalBox
@@ -968,18 +991,6 @@ export default class Home extends Component {
                                             <h2>Causeforce</h2>
                                         </div>
                                         <div>
-                                            <Linkable>
-                                                <a href="https://causeforce.com/">
-                                                    View Website
-                                                </a>
-                                            </Linkable>
-                                            <Linkable>
-                                                <a href="https://bitbucket.org/baokhoa/causeforce">
-                                                    View Work
-                                                </a>
-                                            </Linkable>
-                                        </div>
-                                        <div>
                                             <p>
                                                 WordPress Sage, Gulp, Php, Ajax
                                             </p>
@@ -991,6 +1002,19 @@ export default class Home extends Component {
                                                 that includes style changes
                                                 collaborated with design and UX.
                                             </p>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://causeforce.com/">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://bitbucket.org/baokhoa/causeforce">
+                                                    View Work
+                                                </a>
+                                            </Linkable>
+                                            >
                                         </div>
                                     </div>
                                 </ModalBox>
@@ -1006,13 +1030,6 @@ export default class Home extends Component {
                                             <h2>
                                                 Children's Cancer Research Fund
                                             </h2>
-                                        </div>
-                                        <div>
-                                            <Linkable>
-                                                <a href="https://childrenscancer.org/">
-                                                    View Website
-                                                </a>
-                                            </Linkable>
                                         </div>
                                         <div>
                                             <p>
@@ -1035,6 +1052,13 @@ export default class Home extends Component {
                                                 plugins.
                                             </p>
                                         </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://childrenscancer.org/">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                        </div>
                                     </div>
                                 </ModalBox>
                                 <ModalBox
@@ -1052,13 +1076,6 @@ export default class Home extends Component {
                                             </h2>
                                         </div>
                                         <div>
-                                            <Linkable>
-                                                <a href="https://www.chocwalk.org/">
-                                                    View Website
-                                                </a>
-                                            </Linkable>
-                                        </div>
-                                        <div>
                                             <p>
                                                 Rallybound, Html, SCSS, vanilla
                                                 Js
@@ -1074,6 +1091,13 @@ export default class Home extends Component {
                                                 templated to be reused for
                                                 future events.
                                             </p>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://www.chocwalk.org/">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
                                         </div>
                                     </div>
                                 </ModalBox>
