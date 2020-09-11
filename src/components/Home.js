@@ -73,8 +73,31 @@ const Interactivecontainer = styled.div`
         width: 25%;
         position: absolute;
         transition: 0.75s;
-        overflow: hidden;
+        // overflow: hidden;
         text-align: left;
+    }
+
+    div.drop {
+        display: inline-block;
+        margin-top: 1.75em;
+
+        select {
+            width: 150px;
+            height: 25px;
+            z-index: 15;
+            position: relative;
+            color: rgba(137, 196, 244, 1);
+            background: transparent;
+            border: 2px solid rgba(137, 196, 244, 1);
+
+            option {
+                color: #000;
+            }
+
+            &:active {
+                border: 2px solid rgba(137, 196, 244, 1);
+            }
+        }
     }
 
     div p {
@@ -314,8 +337,8 @@ const Copy = styled.div`
 const TitleBox = styled.div`
     width: 100%;
     min-width: 1280px;
-    padding-bottom: 150px;
-    margin: 25px 25px 50px;
+    padding-bottom: 100px;
+    margin: 25px 25px;
     position: relative !important;
     // border: 2px solid rgba(101, 44, 138, 1);
     // background: linear-gradient(
@@ -332,14 +355,13 @@ const TitleBox = styled.div`
 
     h2 {
         color: rgba(137, 196, 244, 1);
+        display: inline-block;
+        min-width: 150px;
     }
 
-    @media screen and (min-width: 1280px) {
-        min-width: 1280px;
-    }
-
-    @media screen and (min-width: 1920px) {
-        min-width: 1920px;
+    @media screen and (max-width: 1280px) {
+        min-width: 800px;
+        margin: 25px auto 50px;
     }
 `;
 
@@ -352,20 +374,23 @@ const TestBox = styled.div`
     display: flex !important;
     flex-wrap: wrap;
     position: relative !important;
-    // border: 2px solid rgba(101, 44, 138, 1);
-    // background: linear-gradient(
-    //     135deg,
-    //     rgba(48, 43, 127, 1) 0%,
-    //     rgba(48, 43, 127, 1) 28%,
-    //     rgba(101, 44, 138, 1) 73%,
-    //     rgba(101, 44, 138, 1) 98%
-    // );
+    transition: 0.4s;
 
     div {
         flex: 0 0 33.333333%;
         width: 33%;
         position: relative;
-        // flex: 0 0 50%;
+        transition: 0.4s;
+
+        &.show {
+            display: block;
+            opaicty: 1;
+        }
+
+        &.hidden {
+            display: none;
+            opacity: 0;
+        }
 
         @media screen and (max-width: 1600px) {
             flex: 0 0 50%;
@@ -467,7 +492,7 @@ const Linkable = styled.div`
     width: 160px !important;
     min-height: 40px;
     position: relative !important;
-    border: 2px solid rgba(108, 122, 137, 1);
+    // border: 2px solid rgba(108, 122, 137, 1);
     margin-bottom: 20px;
     transition: 0.4s;
     margin-right: 25px;
@@ -491,6 +516,13 @@ const Linkable = styled.div`
         display: block;
         line-height: 3;
         z-index: 5;
+        font-weight: redular;
+    }
+
+    a:nth-child(1) {
+        background: rgba(137, 196, 244, 1);
+        color: #fff !important;
+        border: 2;
     }
 
     &.link {
@@ -527,6 +559,9 @@ export default class Home extends Component {
             modalD: false,
             modalE: false,
             modalF: false,
+            wor: true,
+            rea: true,
+            ang: true,
         };
 
         this.hover = this.hover.bind(this);
@@ -555,6 +590,41 @@ export default class Home extends Component {
     componentDidMount() {
         // console.log("hi");
     }
+
+    listenToDropdown = (e) => {
+        console.log(e.target.value);
+
+        if (e.target.value === "all") {
+            this.setState({
+                ang: true,
+                rea: true,
+                wor: true,
+            });
+        }
+        if (e.target.value === "ang") {
+            this.setState({
+                ang: true,
+                rea: false,
+                wor: false,
+            });
+        }
+        if (e.target.value === "rea") {
+            this.setState({
+                rea: true,
+                ang: false,
+                wor: false,
+            });
+        }
+        if (e.target.value === "wor") {
+            this.setState({
+                wor: true,
+                ang: false,
+                rea: false,
+            });
+
+            console.log(this.state.wor);
+        }
+    };
 
     listenToScroll = () => {
         // console.log("testerr"); const winScroll =     document.body.scrollTop ||
@@ -708,6 +778,27 @@ export default class Home extends Component {
                                 <TitleBox>
                                     <div>
                                         <h2>Work</h2>
+                                        <div className="drop">
+                                            <select
+                                                onChange={this.listenToDropdown}
+                                                value={this.state.value}
+                                                name="tech"
+                                                id="tech"
+                                            >
+                                                <option value="all">
+                                                    Tech: All
+                                                </option>
+                                                <option value="ang">
+                                                    Angular
+                                                </option>
+                                                {/* <option value="rea">
+                                                    React
+                                                </option> */}
+                                                <option value="wor">
+                                                    Website | Wordpress
+                                                </option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </TitleBox>
                                 <TestBox
@@ -717,9 +808,12 @@ export default class Home extends Component {
                                     }
                                     id="work"
                                     ref={this.myDivToFocus}
-                                    onMouseEnter={this.listenToScroll}
                                 >
-                                    <div>
+                                    <div
+                                        className={
+                                            this.state.wor ? "show" : "hidden"
+                                        }
+                                    >
                                         <Image className="a">
                                             <HoverText
                                                 onMouseEnter={this.hoverb}
@@ -734,13 +828,12 @@ export default class Home extends Component {
                                                 Learn More
                                             </HoverText>
                                         </Image>
-                                        {/* <Linkable className="link">
-                                            <a href="https://ride.conquercancer.ca/toronto20">
-                                                View Website
-                                            </a>
-                                        </Linkable> */}
                                     </div>
-                                    <div>
+                                    <div
+                                        className={
+                                            this.state.ang ? "show" : "hidden"
+                                        }
+                                    >
                                         <Image className="b">
                                             <HoverText
                                                 onMouseEnter={this.hoverb}
@@ -756,7 +849,11 @@ export default class Home extends Component {
                                             </HoverText>
                                         </Image>
                                     </div>
-                                    <div>
+                                    <div
+                                        className={
+                                            this.state.ang ? "show" : "hidden"
+                                        }
+                                    >
                                         <Image className="c">
                                             <HoverText
                                                 onMouseEnter={this.hoverc}
@@ -772,7 +869,11 @@ export default class Home extends Component {
                                             </HoverText>
                                         </Image>
                                     </div>
-                                    <div>
+                                    <div
+                                        className={
+                                            this.state.wor ? "show" : "hidden"
+                                        }
+                                    >
                                         <Image className="d">
                                             <HoverText
                                                 onMouseEnter={this.hoverd}
@@ -788,7 +889,11 @@ export default class Home extends Component {
                                             </HoverText>
                                         </Image>
                                     </div>
-                                    <div>
+                                    <div
+                                        className={
+                                            this.state.wor ? "show" : "hidden"
+                                        }
+                                    >
                                         <Image className="e">
                                             <HoverText
                                                 onMouseEnter={this.hovere}
@@ -804,7 +909,11 @@ export default class Home extends Component {
                                             </HoverText>
                                         </Image>
                                     </div>
-                                    <div>
+                                    <div
+                                        className={
+                                            this.state.wor ? "show" : "hidden"
+                                        }
+                                    >
                                         <Image className="f">
                                             <HoverText
                                                 onMouseEnter={this.hoverf}
@@ -953,7 +1062,7 @@ export default class Home extends Component {
                                                 momentjs
                                             </p>
                                             <p className="copy">
-                                                Multi page web application
+                                                Multi-page web application
                                                 developed in display fundraising
                                                 values in real time. This also
                                                 records a daily snapshot in
@@ -995,7 +1104,7 @@ export default class Home extends Component {
                                                 WordPress Sage, Gulp, Php, Ajax
                                             </p>
                                             <p className="copy">
-                                                Multi page web site developed in
+                                                Multi-page web site developed in
                                                 order to advertise and promote
                                                 our services as well as job
                                                 openings. Maitenance year long

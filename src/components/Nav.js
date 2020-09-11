@@ -98,7 +98,7 @@ export default class Home extends Component {
                 <NavLink onClick={this.top} to="/">
                     Home
                 </NavLink>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/about">Skills</NavLink>
                 {/* <NavLink to="/work">Work</NavLink> */}
             </Navline>
         );
