@@ -437,6 +437,7 @@ const HoverText = styled.p`
 const ModalBox = styled.div`
     min-height: 800px;
     width: 60% !important;
+    max-width: 800px;
     display: none;
     background: #fff;
     position: fixed !important;
@@ -520,9 +521,15 @@ const Linkable = styled.div`
     }
 
     a:nth-child(1) {
-        background: rgba(137, 196, 244, 1);
+        background: rgb(28, 4, 59);
+        border: 1px solid rgb(28, 4, 59);
         color: #fff !important;
         border: 2;
+
+        &:hover {
+            background: #fff !important;
+            color: rgb(28, 4, 59) !important;
+        }
     }
 
     &.link {
@@ -869,7 +876,7 @@ export default class Home extends Component {
                                             </HoverText>
                                         </Image>
                                     </div>
-                                    <div
+                                    {/* <div
                                         className={
                                             this.state.wor ? "show" : "hidden"
                                         }
@@ -888,7 +895,7 @@ export default class Home extends Component {
                                                 Learn More
                                             </HoverText>
                                         </Image>
-                                    </div>
+                                    </div> */}
                                     <div
                                         className={
                                             this.state.wor ? "show" : "hidden"
@@ -943,7 +950,7 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Wordpress, Liquid, Sage, Ajax,
+                                                Wordpress, Liquid Sage, Ajax,
                                                 Restful Api, Scheduler, vanilla
                                                 jS, Scss, jQuery, php, Blackbaud
                                                 Luminate, Convio
@@ -986,11 +993,11 @@ export default class Home extends Component {
                                                     View Website
                                                 </a>
                                             </Linkable>
-                                            <Linkable>
+                                            {/* <Linkable>
                                                 <a href="https://bitbucket.org/baokhoa/to20_oci">
                                                     View Work
                                                 </a>
-                                            </Linkable>
+                                            </Linkable> */}
                                         </div>
                                     </div>
                                 </ModalBox>
@@ -1088,7 +1095,7 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                 </ModalBox>
-                                <ModalBox
+                                {/* <ModalBox
                                     onClick={this.modalD}
                                     className={
                                         this.state.modalD ? "click" : "unclick"
@@ -1101,7 +1108,8 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                WordPress Sage, Gulp, Php, Ajax
+                                                WordPress, Liquid Sage, Gulp,
+                                                Php, Ajax, jQuery, Restful Api
                                             </p>
                                             <p className="copy">
                                                 Multi-page web site developed in
@@ -1126,7 +1134,7 @@ export default class Home extends Component {
                                             >
                                         </div>
                                     </div>
-                                </ModalBox>
+                                </ModalBox> */}
                                 <ModalBox
                                     onClick={this.modalE}
                                     className={
@@ -1228,12 +1236,12 @@ export default class Home extends Component {
                                         this.state.modalC ? "click" : "unclick"
                                     }
                                 ></ModalContainer>
-                                <ModalContainer
+                                {/* <ModalContainer
                                     onClick={this.closeModalD}
                                     className={
                                         this.state.modalD ? "click" : "unclick"
                                     }
-                                ></ModalContainer>
+                                ></ModalContainer> */}
                                 <ModalContainer
                                     onClick={this.closeModalE}
                                     className={
