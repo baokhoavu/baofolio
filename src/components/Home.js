@@ -441,7 +441,7 @@ const ModalBox = styled.div`
     display: none;
     background: #fff;
     position: fixed !important;
-    overflow: visible;
+    overflow: visible;+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -802,7 +802,7 @@ export default class Home extends Component {
                                                     React
                                                 </option> */}
                                                 <option value="wor">
-                                                    Website | Wordpress
+                                                    Wordpress
                                                 </option>
                                             </select>
                                         </div>
