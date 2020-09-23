@@ -441,7 +441,7 @@ const ModalBox = styled.div`
     display: none;
     background: #fff;
     position: fixed !important;
-    overflow: visible;+
+    overflow: visible;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -569,6 +569,7 @@ export default class Home extends Component {
             wor: true,
             rea: true,
             ang: true,
+            site: true,
         };
 
         this.hover = this.hover.bind(this);
@@ -613,6 +614,7 @@ export default class Home extends Component {
                 ang: true,
                 rea: false,
                 wor: false,
+                site: false,
             });
         }
         if (e.target.value === "rea") {
@@ -620,6 +622,7 @@ export default class Home extends Component {
                 rea: true,
                 ang: false,
                 wor: false,
+                site: false,
             });
         }
         if (e.target.value === "wor") {
@@ -627,6 +630,7 @@ export default class Home extends Component {
                 wor: true,
                 ang: false,
                 rea: false,
+                site: false,
             });
 
             console.log(this.state.wor);
@@ -898,7 +902,7 @@ export default class Home extends Component {
                                     </div> */}
                                     <div
                                         className={
-                                            this.state.wor ? "show" : "hidden"
+                                            this.state.site ? "show" : "hidden"
                                         }
                                     >
                                         <Image className="e">
@@ -918,7 +922,7 @@ export default class Home extends Component {
                                     </div>
                                     <div
                                         className={
-                                            this.state.wor ? "show" : "hidden"
+                                            this.state.site ? "show" : "hidden"
                                         }
                                     >
                                         <Image className="f">
