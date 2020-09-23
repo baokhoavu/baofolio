@@ -607,6 +607,7 @@ export default class Home extends Component {
                 ang: true,
                 rea: true,
                 wor: true,
+                site: true,
             });
         }
         if (e.target.value === "ang") {
