@@ -37,10 +37,15 @@
 
 .slide-container {
 	width: 100% !important;
-	height: 80%;
+	height: 100%;
 }
 
-.slide-container div,
+.slide-container div {
+	width: 100% !important;
+	height: 560px;
+	background: #fff;
+}
+
 .react-slide-container {
 	width: 100% !important;
 	height: 100%;
@@ -68,15 +73,16 @@
 
 .slide-descrip {
 	top: 70%;
-	width: 98% !important;
-	height: 27%;
-	padding: 1%;
-	background: #fff;
+	width: 90.05% !important;
+	height: 35%;
+	padding: 2% 5%;
+	background: rgba(0, 0, 0, 0.5);
 	z-index: 5;
 }
 
 .slide-descrip div h2 {
-	color: rgba(46, 49, 49, 1);
+	/* color: rgba(46, 49, 49, 1); */
+	color: #fff;
 	text-align: left;
 	font-size: 30px;
 	margin: 0;
@@ -96,7 +102,8 @@
 }
 
 .slide-descrip div p {
-	color: rgba(108, 122, 137, 1);
+	/* color: rgba(108, 122, 137, 1); */
+	color: #fff;
 	text-align: left;
 	margin: 0;
 	font-size: 18px;
@@ -107,6 +114,7 @@
 	/* margin-top: 0.5%; */
 	font-size: 15px;
 	color: rgba(46, 49, 49, 1);
+	color: #fff;
 	margin-bottom: 15px;
 
 }

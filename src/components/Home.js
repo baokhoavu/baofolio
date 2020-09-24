@@ -26,6 +26,10 @@ const Body = styled.div`
 const Boxcontainer = styled.div`
     width: 500px;
 
+    @media screen and (max-width: 500px) {
+        width: 90%;
+    }
+
     &:nth-child(1) {
         padding-top: 500px;
 
@@ -38,6 +42,10 @@ const Boxcontainer = styled.div`
         z-index: 6;
         padding-bottom: 600px;
         padding-top: 15px;
+
+        @media screen and (max-width: 800px) {
+            padding-bottom: 0;
+        }
 
         div:nth-child(3) a {
             display: block;
@@ -69,12 +77,20 @@ const Interactivecontainer = styled.div`
     //   width: 500px;
     transition: 0.75s;
 
-    div {
+    > div {
         width: 25%;
         position: absolute;
         transition: 0.75s;
         // overflow: hidden;
         text-align: left;
+
+        @media screen and (max-width: 800px) {
+            // margin: 25px 2.5% 250px;
+
+            min-width: 90%;
+            margin: 25px auto 250px !important;
+            display: none;
+        }
     }
 
     div.drop {
@@ -183,6 +199,10 @@ const Clouds = styled.div`
         max-height: 110px;
         margin: 0 50px;
         // position: absolute;
+
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
     }
 
     > div:nth-child(1) {
@@ -204,6 +224,10 @@ const Clouds = styled.div`
         -webkit-animation: MoveSide 3.5s linear infinite;
         -ms-animation: MoveSide 3.5s linear infinite;
         -o-animation: MoveSide 3s linear infinite;
+
+        @media screen and (max-width: 1280px) {
+            left: 250px !important;
+        }
     }
 
     > div:nth-child(3) {
@@ -216,6 +240,10 @@ const Clouds = styled.div`
         -webkit-animation: MoveSide 2s linear infinite;
         -ms-animation: MoveSide 2s linear infinite;
         -o-animation: MoveSide 2s linear infinite;
+
+        @media screen and (max-width: 1280px) {
+            left: 500px !important;
+        }
     }
 
     @keyframes MoveSide {
@@ -256,6 +284,7 @@ const Clouds = styled.div`
 
     @media screen and (max-width: 1280px) {
         min-width: 760px;
+        left: 0;
     }
 `;
 
@@ -362,6 +391,14 @@ const TitleBox = styled.div`
     @media screen and (max-width: 1280px) {
         min-width: 800px;
         margin: 25px auto 50px;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 0;
+
+            @media screen and (max-width: 800px) {
+                min-width: 100%;
+            }
+        }
     }
 `;
 
@@ -375,6 +412,14 @@ const TestBox = styled.div`
     flex-wrap: wrap;
     position: relative !important;
     transition: 0.4s;
+
+    @media screen and (max-width: 1280px) {
+        min-width: 100%;
+
+        @media screen and (max-width: 850px) {
+            min-width: 95%;
+        }
+    }
 
     div {
         flex: 0 0 33.333333%;
@@ -403,6 +448,10 @@ const TestBox = styled.div`
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
+
+            @media screen and (max-width: 850px) {
+                max-width: 90%;
+            }
         }
     }
 
@@ -439,7 +488,7 @@ const ModalBox = styled.div`
     width: 60% !important;
     max-width: 800px;
     display: none;
-    background: #fff;
+    // background: #fff;
     position: fixed !important;
     overflow: visible;
     top: 50%;
@@ -459,9 +508,9 @@ const ModalBox = styled.div`
         display: none;
     }
 
-    @media screen and (min-width: 1300px) {
-        min-width: 1268px;
-    }
+    // @media screen and (min-width: 1300px) {
+    //     min-width: 1268px;
+    // }
 `;
 
 const ModalContainer = styled.div`
@@ -955,9 +1004,10 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Wordpress, Liquid Sage, Ajax,
-                                                Restful Api, Scheduler, vanilla
-                                                jS, Scss, jQuery, php, Blackbaud
+                                                Wordpress, Liquid Sage, HTML5,
+                                                Bootstrap, SCSS, Ajax, Restful
+                                                Api, Scheduler, vanilla jS,
+                                                Scss, jQuery, php, Blackbaud
                                                 Luminate, Convio
                                             </p>
                                             <p className="copy">
@@ -1021,10 +1071,10 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Angular 9, Scss, Express,
-                                                Typescript, Material, RxJS,
-                                                Dataservice, Blackbaud Luminate,
-                                                Convio,
+                                                Angular 9, Scss, Express, ES6,
+                                                SCSS, Typescript, Material,
+                                                RxJS, Dataservice, Blackbaud
+                                                Luminate, Convio,
                                             </p>
                                             <p className="copy">
                                                 Multi page web application
@@ -1069,9 +1119,9 @@ export default class Home extends Component {
                                         <div>
                                             <p>
                                                 Angular 5, Mongodb, Mongoose,
-                                                Express, Promise, NodeJs,
-                                                Blackbaud Luminate, Convio,
-                                                momentjs
+                                                HTML5, ES5, Express, Promise,
+                                                NodeJs, Blackbaud Luminate,
+                                                Convio, momentjs
                                             </p>
                                             <p className="copy">
                                                 Multi-page web application
@@ -1155,9 +1205,9 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Blackbaud Luminate, Html, CSS,
+                                                Blackbaud Luminate, HTML5, CSS,
                                                 Bootstrap, vanilla Js, jQuery,
-                                                Restful Api, Php
+                                                Luminate Api, Php
                                             </p>
                                             <p className="copy">
                                                 Re-developed the home page as
@@ -1199,19 +1249,15 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Rallybound, Html, SCSS, vanilla
-                                                Js
+                                                Rallybound, HTML5, SCSS, vanilla
+                                                Js,
                                             </p>
                                             <p className="copy">
-                                                Re-developed campaign and
-                                                landing pages alongside the
-                                                client and Design/UX in order to
-                                                include latest web designs.
-                                                Custom responsive design is
-                                                created per web site tailoring
-                                                to target every page and
-                                                templated to be reused for
-                                                future events.
+                                                Developed campaign and landing
+                                                pages alongside the client and
+                                                Design/UX in order to include
+                                                latest web designs. Created
+                                                reusable responsive emails.
                                             </p>
                                         </div>
                                         <div>
