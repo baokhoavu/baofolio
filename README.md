@@ -1,4 +1,6 @@
-## Bao's Portfolio
+## Baofolio
+
+### Bao's Portfolio
 
 Portfolio of Web Experience created using ReactJS with some extra libraries. Experience ranges from Angular to ReactJS.
 
