@@ -382,10 +382,21 @@ const TitleBox = styled.div`
         width: 100%;
     }
 
-    h2 {
-        color: rgba(137, 196, 244, 1);
+    a {
+        color: rgba(137, 196, 244, 1) !important;
         display: inline-block;
         min-width: 150px;
+		font-size: 54px;
+		font-weight: bolder;
+		position: relative;
+		top: 5px;
+		margin-right: 15px;
+		z-index: 15;
+
+		&:hover {
+			color: rgba(197,239,247,1) !important;
+			text-decoration: underline;	
+		}
     }
 
     @media screen and (max-width: 1280px) {
@@ -838,7 +849,7 @@ export default class Home extends Component {
                                 </Clouds>
                                 <TitleBox>
                                     <div>
-                                        <h2>Work</h2>
+                                        <a href="https://github.com/baokhoavu">Work</a> 
                                         <div className="drop">
                                             <select
                                                 onChange={this.listenToDropdown}
@@ -1006,7 +1017,7 @@ export default class Home extends Component {
                                             <p>
                                                 Wordpress, Liquid Sage, HTML5,
                                                 Bootstrap, SCSS, Ajax, Restful
-                                                Api, Scheduler, vanilla jS,
+                                                Api, Scheduler, Vanilla jS,
                                                 Scss, jQuery, php, Blackbaud
                                                 Luminate, Convio
                                             </p>
@@ -1098,7 +1109,7 @@ export default class Home extends Component {
                                                 </a>
                                             </Linkable>
                                             <Linkable>
-                                                <a href="https://bitbucket.org/baokhoa/ab20_oci">
+                                                <a href="https://github.com/baokhoavu/dev_oci">
                                                     View Work
                                                 </a>
                                             </Linkable>
@@ -1206,7 +1217,7 @@ export default class Home extends Component {
                                         <div>
                                             <p>
                                                 Blackbaud Luminate, HTML5, CSS,
-                                                Bootstrap, vanilla Js, jQuery,
+                                                Bootstrap, Vanilla Js, jQuery,
                                                 Luminate Api, Php
                                             </p>
                                             <p className="copy">
@@ -1249,7 +1260,7 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                Rallybound, HTML5, SCSS, vanilla
+                                                Rallybound, HTML5, CSS, Vanilla
                                                 Js,
                                             </p>
                                             <p className="copy">

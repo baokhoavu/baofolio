@@ -25,5 +25,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-*.PNG
+.png
+.jpg
 .PNG
+.JPG
+*.png
+*.jpg
+*.PNG
+*.JPG
+.svg
+*.svg

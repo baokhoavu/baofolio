@@ -35,25 +35,25 @@ const SlideShowKoi = () => {
                     <div className="image-container">
                         <SlideImage className="a" />
                     </div>
-                    <h2>First Slide</h2>
+                    {/* <h2>First Slide</h2> */}
                 </div>
                 <div className="each-fade">
                     <div className="image-container">
                         <SlideImage className="b" />
                     </div>
-                    <h2>Second Slide</h2>
+                    {/* <h2>Second Slide</h2> */}
                 </div>
                 <div className="each-fade">
                     <div className="image-container">
                         <SlideImage className="c" />
                     </div>
-                    <h2>Third Slide</h2>
+                    {/* <h2>Third Slide</h2> */}
                 </div>
                 <div className="each-fade">
                     <div className="image-container">
                         <SlideImage className="d" />
                     </div>
-                    <h2>Fourth Slide</h2>
+                    {/* <h2>Fourth Slide</h2> */}
                 </div>
             </Fade>
         </div>
