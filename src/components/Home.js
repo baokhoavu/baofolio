@@ -8,6 +8,7 @@ import ic from "../assets/C.PNG";
 import id from "../assets/D.PNG";
 import ie from "../assets/N.PNG";
 import ig from "../assets/O.PNG";
+import igg from "../assets/P.PNG";
 import cloudImage from "../assets/cloud8bit.png";
 import { NavLink, Link } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
@@ -15,9 +16,10 @@ import "react-slideshow-image/dist/styles.css";
 import SlideShow from "./Slideshow.js";
 import SlideShowOci from "./SlideShowOci.js";
 import SlideShowKoi from "./SlideShowKoi.js";
-import SlideshowCf from "./SlideShowCf.js";
+// import SlideshowCf from "./SlideShowCf.js";
 import SlideShowChoc from "./SlideShowChoc.js";
 import SlideShowCcrf from "./SlideShowCcrf.js";
+import SlideShowRcto from "./SlideShowRcto.js";
 // Container
 const Body = styled.div`
     // background-color: #282c34;
@@ -331,6 +333,10 @@ const Image = styled.a`
         background-image: url("${ig}");
     }
 
+	&.g {
+        background-image: url("${igg}");
+    }
+
     // &:hover {
     //     opacity: 0.5;
     // }
@@ -626,6 +632,7 @@ export default class Home extends Component {
             modalD: false,
             modalE: false,
             modalF: false,
+			modalG: false,
             wor: true,
             rea: true,
             ang: true,
@@ -640,18 +647,21 @@ export default class Home extends Component {
         this.openModalD = this.openModalD.bind(this);
         this.openModalE = this.openModalE.bind(this);
         this.openModalF = this.openModalF.bind(this);
+		this.openModalG = this.openModalG.bind(this);
         this.closeModalA = this.closeModalA.bind(this);
         this.closeModalB = this.closeModalB.bind(this);
         this.closeModalC = this.closeModalC.bind(this);
         this.closeModalD = this.closeModalD.bind(this);
         this.closeModalE = this.closeModalE.bind(this);
         this.closeModalF = this.closeModalF.bind(this);
+		this.closeModalG = this.closeModalG.bind(this);
         this.modalA = this.modalA.bind(this);
         this.modalB = this.modalB.bind(this);
         this.modalC = this.modalC.bind(this);
         this.modalD = this.modalD.bind(this);
         this.modalE = this.modalE.bind(this);
         this.modalF = this.modalF.bind(this);
+		this.modalG = this.modalG.bind(this);
         this.myDivToFocus = React.createRef();
     }
 
@@ -764,6 +774,9 @@ export default class Home extends Component {
     openModalF() {
         this.setState(() => ({ modalF: true }));
     }
+	openModalG() {
+        this.setState(() => ({ modalG: true }));
+    }
 
     closeModalA() {
         this.setState(() => ({ modalA: false }));
@@ -783,6 +796,9 @@ export default class Home extends Component {
     closeModalF() {
         this.setState(() => ({ modalF: false }));
     }
+	closeModalG() {
+        this.setState(() => ({ modalG: false }));
+    }
 
     modalA() {
         this.setState(() => ({ modalA: true }));
@@ -801,6 +817,9 @@ export default class Home extends Component {
     }
     modalF() {
         this.setState(() => ({ modalF: true }));
+    }
+	modalG() {
+        this.setState(() => ({ modalG: true }));
     }
 
     render() {
@@ -863,9 +882,9 @@ export default class Home extends Component {
                                                 <option value="ang">
                                                     Angular
                                                 </option>
-                                                {/* <option value="rea">
+                                                <option value="rea">
                                                     React
-                                                </option> */}
+                                                </option>
                                                 <option value="wor">
                                                     Wordpress
                                                 </option>
@@ -881,6 +900,26 @@ export default class Home extends Component {
                                     id="work"
                                     ref={this.myDivToFocus}
                                 >
+									<div
+                                        className={
+                                            this.state.rea ? "show" : "hidden"
+                                        }
+                                    >
+                                        <Image className="g">
+                                            <HoverText
+                                                onMouseEnter={this.hoverb}
+                                                onMouseLeave={this.hoverb}
+                                                onClick={this.openModalG}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            >
+                                                {/* Learn More */}
+                                            </HoverText>
+                                        </Image>
+                                    </div>
                                     <div
                                         className={
                                             this.state.wor ? "show" : "hidden"
@@ -897,7 +936,7 @@ export default class Home extends Component {
                                                         : null
                                                 }
                                             >
-                                                Learn More
+                                                {/* Learn More */}
                                             </HoverText>
                                         </Image>
                                     </div>
@@ -917,7 +956,7 @@ export default class Home extends Component {
                                                         : null
                                                 }
                                             >
-                                                Learn More
+                                                {/* Learn More */}
                                             </HoverText>
                                         </Image>
                                     </div>
@@ -937,7 +976,7 @@ export default class Home extends Component {
                                                         : null
                                                 }
                                             >
-                                                Learn More
+                                                {/* Learn More */}
                                             </HoverText>
                                         </Image>
                                     </div>
@@ -957,7 +996,7 @@ export default class Home extends Component {
                                                         : null
                                                 }
                                             >
-                                                Learn More
+                                                // Learn More
                                             </HoverText>
                                         </Image>
                                     </div> */}
@@ -977,7 +1016,7 @@ export default class Home extends Component {
                                                         : null
                                                 }
                                             >
-                                                Learn More
+                                                {/* Learn More */}
                                             </HoverText>
                                         </Image>
                                     </div>
@@ -997,7 +1036,7 @@ export default class Home extends Component {
                                                         : null
                                                 }
                                             >
-                                                Learn More
+                                                {/* Learn More */}
                                             </HoverText>
                                         </Image>
                                     </div>
@@ -1280,6 +1319,36 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                 </ModalBox>
+								<ModalBox
+                                    onClick={this.modalG}
+                                    className={
+                                        this.state.modalG ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideShowRcto></SlideShowRcto>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>
+                                                Ride To Conquer Cancer Toronto React Homepage
+                                            </h2>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                ReactJs, styled-components, Blackbaud Luminate
+                                            </p>
+                                            <p className="copy">
+                                                Developed the Ride To Conquer Cancer Toronto's Home page using ReactJS instead of Wordpress. Styled Component for styles using nesting and classes. Leaderboard uses a Blackbaud Luminate API that renders a json of data. Only viewable when applied within the Blackbaud Luminate server via FTP access due to shared hosting and whitelisting limits.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://baokhoavu.com/ridetorontoreact/">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                    </div>
+                                </ModalBox>
                                 <ModalContainer
                                     onClick={this.closeModalA}
                                     className={
@@ -1314,6 +1383,12 @@ export default class Home extends Component {
                                     onClick={this.closeModalF}
                                     className={
                                         this.state.modalF ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
+								<ModalContainer
+                                    onClick={this.closeModalG}
+                                    className={
+                                        this.state.modalG ? "click" : "unclick"
                                     }
                                 ></ModalContainer>
                             </Interactivecontainer>
