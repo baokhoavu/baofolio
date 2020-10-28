@@ -1346,6 +1346,11 @@ export default class Home extends Component {
                                                     View Website
                                                 </a>
                                             </Linkable>
+											<Linkable>
+                                                <a href="https://github.com/baokhoavu/ridetorontoreact">
+                                                    View Work
+                                                </a>
+                                            </Linkable>
                                         </div>
                                     </div>
                                 </ModalBox>
