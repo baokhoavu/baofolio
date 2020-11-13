@@ -372,7 +372,7 @@ const Copy = styled.div`
 const TitleBox = styled.div`
     width: 100%;
     min-width: 1280px;
-    padding-bottom: 100px;
+    // padding-bottom: 100px;
     margin: 25px 25px;
     position: relative !important;
     // border: 2px solid rgba(101, 44, 138, 1);
@@ -866,7 +866,10 @@ export default class Home extends Component {
                                     <div></div>
                                     <div></div>
                                 </Clouds>
-                                <TitleBox>
+								<div id="work">
+
+								</div>
+                                {/* <TitleBox>
                                     <div>
                                         <a href="https://github.com/baokhoavu">Work</a> 
                                         <div className="drop">
@@ -891,7 +894,7 @@ export default class Home extends Component {
                                             </select>
                                         </div>
                                     </div>
-                                </TitleBox>
+                                </TitleBox> */}
                                 <TestBox
                                     className={
                                         "test a" +
@@ -900,6 +903,32 @@ export default class Home extends Component {
                                     id="work"
                                     ref={this.myDivToFocus}
                                 >
+									 <TitleBox>
+										<div>
+											<a href="https://github.com/baokhoavu">Work</a> 
+											<div className="drop">
+												<select
+													onChange={this.listenToDropdown}
+													value={this.state.value}
+													name="tech"
+													id="tech"
+												>
+													<option value="all">
+														Tech: All
+													</option>
+													<option value="ang">
+														Angular
+													</option>
+													<option value="rea">
+														React
+													</option>
+													<option value="wor">
+														Wordpress
+													</option>
+												</select>
+											</div>
+										</div>
+									</TitleBox>
 									<div
                                         className={
                                             this.state.rea ? "show" : "hidden"
