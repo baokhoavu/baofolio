@@ -7,7 +7,7 @@ import b from "../assets/causeforce/2.PNG";
 import c from "../assets/causeforce/3.PNG";
 import d from "../assets/causeforce/4.PNG";
 import e from "../assets/causeforce/5.PNG";
-import f from "../assets/causeforce/6.PNG";
+// import f from "../assets/causeforce/6.PNG";
 
 const slideImages = [a, b, c, d];
 
@@ -30,10 +30,6 @@ const SlideImage = styled.img`
 
     &.e {
         background-image: url(${e});
-    }
-
-    &.f {
-        background-image: url(${f});
     }
 `;
 
@@ -71,12 +67,11 @@ const SlideShowCf = () => {
                     </div>
                     {/* <h2>Fifth Slide</h2> */}
                 </div>
-                <div className="each-fade">
+                {/* <div className="each-fade">
                     <div className="image-container">
                         <SlideImage className="f" />
                     </div>
-                    {/* <h2>Sixth Slide</h2> */}
-                </div>
+                </div> */}
             </Fade>
         </div>
     );

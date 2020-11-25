@@ -16,7 +16,7 @@ import "react-slideshow-image/dist/styles.css";
 import SlideShow from "./Slideshow.js";
 import SlideShowOci from "./SlideShowOci.js";
 import SlideShowKoi from "./SlideShowKoi.js";
-// import SlideshowCf from "./SlideShowCf.js";
+import SlideshowCf from "./SlideShowCf.js";
 import SlideShowChoc from "./SlideShowChoc.js";
 import SlideShowCcrf from "./SlideShowCcrf.js";
 import SlideShowRcto from "./SlideShowRcto.js";
@@ -333,7 +333,7 @@ const Image = styled.a`
         background-image: url("${ig}");
     }
 
-	&.g {
+    &.g {
         background-image: url("${igg}");
     }
 
@@ -392,17 +392,17 @@ const TitleBox = styled.div`
         color: rgba(137, 196, 244, 1) !important;
         display: inline-block;
         min-width: 150px;
-		font-size: 54px;
-		font-weight: bolder;
-		position: relative;
-		top: 5px;
-		margin-right: 15px;
-		z-index: 15;
+        font-size: 54px;
+        font-weight: bolder;
+        position: relative;
+        top: 5px;
+        margin-right: 15px;
+        z-index: 15;
 
-		&:hover {
-			color: rgba(197,239,247,1) !important;
-			text-decoration: underline;	
-		}
+        &:hover {
+            color: rgba(197, 239, 247, 1) !important;
+            text-decoration: underline;
+        }
     }
 
     @media screen and (max-width: 1280px) {
@@ -423,8 +423,8 @@ const TestBox = styled.div`
     width: 100%;
     min-height: 800px;
     min-width: 1280px;
-    padding-bottom: 250px;
-    margin: 25px 25px 250px;
+    // padding-bottom: 250px;
+    margin: 25px 25px 125px;
     display: flex !important;
     flex-wrap: wrap;
     position: relative !important;
@@ -632,7 +632,7 @@ export default class Home extends Component {
             modalD: false,
             modalE: false,
             modalF: false,
-			modalG: false,
+            modalG: false,
             wor: true,
             rea: true,
             ang: true,
@@ -647,21 +647,21 @@ export default class Home extends Component {
         this.openModalD = this.openModalD.bind(this);
         this.openModalE = this.openModalE.bind(this);
         this.openModalF = this.openModalF.bind(this);
-		this.openModalG = this.openModalG.bind(this);
+        this.openModalG = this.openModalG.bind(this);
         this.closeModalA = this.closeModalA.bind(this);
         this.closeModalB = this.closeModalB.bind(this);
         this.closeModalC = this.closeModalC.bind(this);
         this.closeModalD = this.closeModalD.bind(this);
         this.closeModalE = this.closeModalE.bind(this);
         this.closeModalF = this.closeModalF.bind(this);
-		this.closeModalG = this.closeModalG.bind(this);
+        this.closeModalG = this.closeModalG.bind(this);
         this.modalA = this.modalA.bind(this);
         this.modalB = this.modalB.bind(this);
         this.modalC = this.modalC.bind(this);
         this.modalD = this.modalD.bind(this);
         this.modalE = this.modalE.bind(this);
         this.modalF = this.modalF.bind(this);
-		this.modalG = this.modalG.bind(this);
+        this.modalG = this.modalG.bind(this);
         this.myDivToFocus = React.createRef();
     }
 
@@ -774,7 +774,7 @@ export default class Home extends Component {
     openModalF() {
         this.setState(() => ({ modalF: true }));
     }
-	openModalG() {
+    openModalG() {
         this.setState(() => ({ modalG: true }));
     }
 
@@ -796,7 +796,7 @@ export default class Home extends Component {
     closeModalF() {
         this.setState(() => ({ modalF: false }));
     }
-	closeModalG() {
+    closeModalG() {
         this.setState(() => ({ modalG: false }));
     }
 
@@ -818,7 +818,7 @@ export default class Home extends Component {
     modalF() {
         this.setState(() => ({ modalF: true }));
     }
-	modalG() {
+    modalG() {
         this.setState(() => ({ modalG: true }));
     }
 
@@ -866,9 +866,7 @@ export default class Home extends Component {
                                     <div></div>
                                     <div></div>
                                 </Clouds>
-								<div id="work">
-
-								</div>
+                                <div id="work"></div>
                                 {/* <TitleBox>
                                     <div>
                                         <a href="https://github.com/baokhoavu">Work</a> 
@@ -903,33 +901,37 @@ export default class Home extends Component {
                                     id="work"
                                     ref={this.myDivToFocus}
                                 >
-									 <TitleBox>
-										<div>
-											<a href="https://github.com/baokhoavu">Work</a> 
-											<div className="drop">
-												<select
-													onChange={this.listenToDropdown}
-													value={this.state.value}
-													name="tech"
-													id="tech"
-												>
-													<option value="all">
-														Tech: All
-													</option>
-													<option value="ang">
-														Angular
-													</option>
-													<option value="rea">
-														React
-													</option>
-													<option value="wor">
-														Wordpress
-													</option>
-												</select>
-											</div>
-										</div>
-									</TitleBox>
-									<div
+                                    <TitleBox>
+                                        <div>
+                                            <a href="https://github.com/baokhoavu">
+                                                Work
+                                            </a>
+                                            <div className="drop">
+                                                <select
+                                                    onChange={
+                                                        this.listenToDropdown
+                                                    }
+                                                    value={this.state.value}
+                                                    name="tech"
+                                                    id="tech"
+                                                >
+                                                    <option value="all">
+                                                        Tech: All
+                                                    </option>
+                                                    <option value="ang">
+                                                        Angular
+                                                    </option>
+                                                    <option value="rea">
+                                                        React
+                                                    </option>
+                                                    <option value="wor">
+                                                        Wordpress
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </TitleBox>
+                                    <div
                                         className={
                                             this.state.rea ? "show" : "hidden"
                                         }
@@ -1009,7 +1011,7 @@ export default class Home extends Component {
                                             </HoverText>
                                         </Image>
                                     </div>
-                                    {/* <div
+                                    <div
                                         className={
                                             this.state.wor ? "show" : "hidden"
                                         }
@@ -1028,7 +1030,7 @@ export default class Home extends Component {
                                                 // Learn More
                                             </HoverText>
                                         </Image>
-                                    </div> */}
+                                    </div>
                                     <div
                                         className={
                                             this.state.site ? "show" : "hidden"
@@ -1229,7 +1231,7 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                 </ModalBox>
-                                {/* <ModalBox
+                                <ModalBox
                                     onClick={this.modalD}
                                     className={
                                         this.state.modalD ? "click" : "unclick"
@@ -1242,16 +1244,20 @@ export default class Home extends Component {
                                         </div>
                                         <div>
                                             <p>
-                                                WordPress, Liquid Sage, Gulp,
-                                                Php, Ajax, jQuery, Restful Api
+                                                WordPress, VueJs, Tailwind,
+                                                jQuery, Blackbaud Luminate
                                             </p>
                                             <p className="copy">
-                                                Multi-page web site developed in
-                                                order to advertise and promote
-                                                our services as well as job
-                                                openings. Maitenance year long
-                                                that includes style changes
-                                                collaborated with design and UX.
+                                                Custom Home Page built using
+                                                VueJs and Wordpress in order to
+                                                display Causeforce's new
+                                                branding and services. This
+                                                design was created by UX/UI
+                                                designers incorporating latest
+                                                user flow and transitions.
+                                                Development and proofing was
+                                                done with minimal readable
+                                                coding.
                                             </p>
                                         </div>
                                         <div>
@@ -1261,14 +1267,13 @@ export default class Home extends Component {
                                                 </a>
                                             </Linkable>
                                             <Linkable>
-                                                <a href="https://bitbucket.org/baokhoa/causeforce">
+                                                <a href="https://github.com/baokhoavu/work_press">
                                                     View Work
                                                 </a>
                                             </Linkable>
-                                            >
                                         </div>
                                     </div>
-                                </ModalBox> */}
+                                </ModalBox>
                                 <ModalBox
                                     onClick={this.modalE}
                                     className={
@@ -1348,7 +1353,7 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                 </ModalBox>
-								<ModalBox
+                                <ModalBox
                                     onClick={this.modalG}
                                     className={
                                         this.state.modalG ? "click" : "unclick"
@@ -1358,15 +1363,28 @@ export default class Home extends Component {
                                     <div className="slide-descrip">
                                         <div>
                                             <h2>
-                                                Ride To Conquer Cancer Toronto React Homepage
+                                                Ride To Conquer Cancer Toronto
+                                                React Homepage
                                             </h2>
                                         </div>
                                         <div>
                                             <p>
-                                                ReactJs, styled-components, Blackbaud Luminate
+                                                ReactJs, styled-components,
+                                                Blackbaud Luminate
                                             </p>
                                             <p className="copy">
-                                                Developed the Ride To Conquer Cancer Toronto's Home page using ReactJS instead of Wordpress. Styled Component for styles using nesting and classes. Leaderboard uses a Blackbaud Luminate API that renders a json of data. Only viewable when applied within the Blackbaud Luminate server via FTP access due to shared hosting and whitelisting limits.
+                                                Developed the Ride To Conquer
+                                                Cancer Toronto's Home page using
+                                                ReactJS instead of Wordpress.
+                                                Styled Component for styles
+                                                using nesting and classes.
+                                                Leaderboard uses a Blackbaud
+                                                Luminate API that renders a json
+                                                of data. Only viewable when
+                                                applied within the Blackbaud
+                                                Luminate server via FTP access
+                                                due to shared hosting and
+                                                whitelisting limits.
                                             </p>
                                         </div>
                                         <div>
@@ -1375,7 +1393,7 @@ export default class Home extends Component {
                                                     View Website
                                                 </a>
                                             </Linkable>
-											<Linkable>
+                                            <Linkable>
                                                 <a href="https://github.com/baokhoavu/ridetorontoreact">
                                                     View Work
                                                 </a>
@@ -1401,12 +1419,12 @@ export default class Home extends Component {
                                         this.state.modalC ? "click" : "unclick"
                                     }
                                 ></ModalContainer>
-                                {/* <ModalContainer
+                                <ModalContainer
                                     onClick={this.closeModalD}
                                     className={
                                         this.state.modalD ? "click" : "unclick"
                                     }
-                                ></ModalContainer> */}
+                                ></ModalContainer>
                                 <ModalContainer
                                     onClick={this.closeModalE}
                                     className={
@@ -1419,7 +1437,7 @@ export default class Home extends Component {
                                         this.state.modalF ? "click" : "unclick"
                                     }
                                 ></ModalContainer>
-								<ModalContainer
+                                <ModalContainer
                                     onClick={this.closeModalG}
                                     className={
                                         this.state.modalG ? "click" : "unclick"
