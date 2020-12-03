@@ -1156,7 +1156,7 @@ export default class Home extends Component {
                                                 Angular 9, Scss, Express, ES6,
                                                 SCSS, Typescript, Material,
                                                 RxJS, Dataservice, Blackbaud
-                                                Luminate, Convio,
+                                                Luminate, Convio, NodeJS
                                             </p>
                                             <p className="copy">
                                                 Multi page web application
