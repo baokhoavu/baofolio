@@ -1179,7 +1179,7 @@ export default class Home extends Component {
                                                 </a>
                                             </Linkable>
                                             <Linkable>
-                                                <a href="https://github.com/baokhoavu/dev_oci">
+                                                <a href="https://github.com/baokhoavu/server_oci">
                                                     View Work
                                                 </a>
                                             </Linkable>
