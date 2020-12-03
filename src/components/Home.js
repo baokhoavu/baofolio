@@ -933,6 +933,46 @@ export default class Home extends Component {
                                     </TitleBox>
                                     <div
                                         className={
+                                            this.state.wor ? "show" : "hidden"
+                                        }
+                                    >
+                                        <Image className="d">
+                                            <HoverText
+                                                onMouseEnter={this.hoverd}
+                                                onMouseLeave={this.hoverd}
+                                                onClick={this.openModalD}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            >
+                                                // Learn More
+                                            </HoverText>
+                                        </Image>
+                                    </div>
+                                    <div
+                                        className={
+                                            this.state.ang ? "show" : "hidden"
+                                        }
+                                    >
+                                        <Image className="b">
+                                            <HoverText
+                                                onMouseEnter={this.hoverb}
+                                                onMouseLeave={this.hoverb}
+                                                onClick={this.openModalB}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            >
+                                                {/* Learn More */}
+                                            </HoverText>
+                                        </Image>
+                                    </div>
+                                    <div
+                                        className={
                                             this.state.rea ? "show" : "hidden"
                                         }
                                     >
@@ -976,26 +1016,6 @@ export default class Home extends Component {
                                             this.state.ang ? "show" : "hidden"
                                         }
                                     >
-                                        <Image className="b">
-                                            <HoverText
-                                                onMouseEnter={this.hoverb}
-                                                onMouseLeave={this.hoverb}
-                                                onClick={this.openModalB}
-                                                className={
-                                                    this.state.hovered
-                                                        ? "hovered"
-                                                        : null
-                                                }
-                                            >
-                                                {/* Learn More */}
-                                            </HoverText>
-                                        </Image>
-                                    </div>
-                                    <div
-                                        className={
-                                            this.state.ang ? "show" : "hidden"
-                                        }
-                                    >
                                         <Image className="c">
                                             <HoverText
                                                 onMouseEnter={this.hoverc}
@@ -1011,26 +1031,7 @@ export default class Home extends Component {
                                             </HoverText>
                                         </Image>
                                     </div>
-                                    <div
-                                        className={
-                                            this.state.wor ? "show" : "hidden"
-                                        }
-                                    >
-                                        <Image className="d">
-                                            <HoverText
-                                                onMouseEnter={this.hoverd}
-                                                onMouseLeave={this.hoverd}
-                                                onClick={this.openModalD}
-                                                className={
-                                                    this.state.hovered
-                                                        ? "hovered"
-                                                        : null
-                                                }
-                                            >
-                                                // Learn More
-                                            </HoverText>
-                                        </Image>
-                                    </div>
+
                                     <div
                                         className={
                                             this.state.site ? "show" : "hidden"
