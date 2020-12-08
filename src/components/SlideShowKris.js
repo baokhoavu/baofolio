@@ -2,10 +2,10 @@ import React from "react";
 import { Fade } from "react-slideshow-image";
 import styled from "styled-components";
 // import "react-slideshow-image/dist/styles.css";
-import a from "../assets/portfolio/1.PNG";
-import b from "../assets/portfolio/2.PNG";
-import c from "../assets/portfolio/3.PNG";
-import d from "../assets/portfolio/4.PNG";
+import a from "../assets/kristeenajs/1.PNG";
+import b from "../assets/kristeenajs/2.PNG";
+import c from "../assets/kristeenajs/3.PNG";
+import d from "../assets/kristeenajs/4.PNG";
 
 const slideImages = [a, b, c, d];
 
