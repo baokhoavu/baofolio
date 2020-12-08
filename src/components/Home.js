@@ -1492,8 +1492,9 @@ export default class Home extends Component {
                                                 ParticleJS is used to display
                                                 particles in the background with
                                                 interactive motion. Hosted on
-                                                ahosting using FTP to upload and
-                                                update.
+                                                a2hosting using FTP to upload
+                                                and update after SSH user
+                                                access.
                                             </p>
                                         </div>
                                         <div>
