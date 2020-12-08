@@ -9,6 +9,8 @@ import id from "../assets/D.PNG";
 import ie from "../assets/N.PNG";
 import ig from "../assets/O.PNG";
 import igg from "../assets/P.PNG";
+import ih from "../assets/Q.PNG";
+import ii from "../assets/R.PNG";
 import cloudImage from "../assets/cloud8bit.png";
 import { NavLink, Link } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
@@ -20,6 +22,8 @@ import SlideshowCf from "./SlideShowCf.js";
 import SlideShowChoc from "./SlideShowChoc.js";
 import SlideShowCcrf from "./SlideShowCcrf.js";
 import SlideShowRcto from "./SlideShowRcto.js";
+import SlideShowPort from "./SlideShowPort.js";
+import SlideShowKris from "./SlideShowKris.js";
 // Container
 const Body = styled.div`
     // background-color: #282c34;
@@ -337,6 +341,14 @@ const Image = styled.a`
         background-image: url("${igg}");
     }
 
+    &.h {
+        background-image: url("${ih}");
+    }
+
+    &.i {
+        background-image: url("${ii}");
+    }
+
     // &:hover {
     //     opacity: 0.5;
     // }
@@ -633,6 +645,8 @@ export default class Home extends Component {
             modalE: false,
             modalF: false,
             modalG: false,
+            modalH: false,
+            modalI: false,
             wor: true,
             rea: true,
             ang: true,
@@ -648,6 +662,8 @@ export default class Home extends Component {
         this.openModalE = this.openModalE.bind(this);
         this.openModalF = this.openModalF.bind(this);
         this.openModalG = this.openModalG.bind(this);
+        this.openModalH = this.openModalH.bind(this);
+        this.openModalI = this.openModalI.bind(this);
         this.closeModalA = this.closeModalA.bind(this);
         this.closeModalB = this.closeModalB.bind(this);
         this.closeModalC = this.closeModalC.bind(this);
@@ -655,6 +671,8 @@ export default class Home extends Component {
         this.closeModalE = this.closeModalE.bind(this);
         this.closeModalF = this.closeModalF.bind(this);
         this.closeModalG = this.closeModalG.bind(this);
+        this.closeModalH = this.closeModalH.bind(this);
+        this.closeModalI = this.closeModalI.bind(this);
         this.modalA = this.modalA.bind(this);
         this.modalB = this.modalB.bind(this);
         this.modalC = this.modalC.bind(this);
@@ -662,6 +680,8 @@ export default class Home extends Component {
         this.modalE = this.modalE.bind(this);
         this.modalF = this.modalF.bind(this);
         this.modalG = this.modalG.bind(this);
+        this.modalH = this.modalH.bind(this);
+        this.modalI = this.modalI.bind(this);
         this.myDivToFocus = React.createRef();
     }
 
@@ -777,6 +797,12 @@ export default class Home extends Component {
     openModalG() {
         this.setState(() => ({ modalG: true }));
     }
+    openModalH() {
+        this.setState(() => ({ modalH: true }));
+    }
+    openModalI() {
+        this.setState(() => ({ modalI: true }));
+    }
 
     closeModalA() {
         this.setState(() => ({ modalA: false }));
@@ -799,6 +825,12 @@ export default class Home extends Component {
     closeModalG() {
         this.setState(() => ({ modalG: false }));
     }
+    closeModalH() {
+        this.setState(() => ({ modalH: false }));
+    }
+    closeModalI() {
+        this.setState(() => ({ modalI: false }));
+    }
 
     modalA() {
         this.setState(() => ({ modalA: true }));
@@ -820,6 +852,12 @@ export default class Home extends Component {
     }
     modalG() {
         this.setState(() => ({ modalG: true }));
+    }
+    modalH() {
+        this.setState(() => ({ modalH: true }));
+    }
+    modalI() {
+        this.setState(() => ({ modalI: true }));
     }
 
     render() {
@@ -946,9 +984,7 @@ export default class Home extends Component {
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            >
-                                                // Learn More
-                                            </HoverText>
+                                            ></HoverText>
                                         </Image>
                                     </div>
                                     <div
@@ -966,9 +1002,7 @@ export default class Home extends Component {
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            >
-                                                {/* Learn More */}
-                                            </HoverText>
+                                            ></HoverText>
                                         </Image>
                                     </div>
                                     <div
@@ -986,9 +1020,7 @@ export default class Home extends Component {
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            >
-                                                {/* Learn More */}
-                                            </HoverText>
+                                            ></HoverText>
                                         </Image>
                                     </div>
                                     <div
@@ -1006,9 +1038,7 @@ export default class Home extends Component {
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            >
-                                                {/* Learn More */}
-                                            </HoverText>
+                                            ></HoverText>
                                         </Image>
                                     </div>
                                     <div
@@ -1026,9 +1056,7 @@ export default class Home extends Component {
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            >
-                                                {/* Learn More */}
-                                            </HoverText>
+                                            ></HoverText>
                                         </Image>
                                     </div>
 
@@ -1047,9 +1075,7 @@ export default class Home extends Component {
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            >
-                                                {/* Learn More */}
-                                            </HoverText>
+                                            ></HoverText>
                                         </Image>
                                     </div>
                                     <div
@@ -1067,9 +1093,43 @@ export default class Home extends Component {
                                                         ? "hovered"
                                                         : null
                                                 }
-                                            >
-                                                {/* Learn More */}
-                                            </HoverText>
+                                            ></HoverText>
+                                        </Image>
+                                    </div>
+                                    <div
+                                        className={
+                                            this.state.rea ? "show" : "hidden"
+                                        }
+                                    >
+                                        <Image className="h">
+                                            <HoverText
+                                                onMouseEnter={this.hoverh}
+                                                onMouseLeave={this.hoverh}
+                                                onClick={this.openModalH}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            ></HoverText>
+                                        </Image>
+                                    </div>
+                                    <div
+                                        className={
+                                            this.state.rea ? "show" : "hidden"
+                                        }
+                                    >
+                                        <Image className="i">
+                                            <HoverText
+                                                onMouseEnter={this.hoveri}
+                                                onMouseLeave={this.hoveri}
+                                                onClick={this.openModalI}
+                                                className={
+                                                    this.state.hovered
+                                                        ? "hovered"
+                                                        : null
+                                                }
+                                            ></HoverText>
                                         </Image>
                                     </div>
                                 </TestBox>
@@ -1402,6 +1462,99 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                 </ModalBox>
+                                <ModalBox
+                                    onClick={this.modalH}
+                                    className={
+                                        this.state.modalH ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideShowPort></SlideShowPort>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>React Portfolio</h2>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                ReactJs, styled-components,
+                                                NodeJs, ParticleJs, Express
+                                            </p>
+                                            <p className="copy">
+                                                Developed a Portfolio displaying
+                                                skills and projects used to give
+                                                a glimpse of my experience
+                                                working as a developer. Created
+                                                using create-react-app out of
+                                                the box applying styled
+                                                components for components and
+                                                stylesheets. Website is
+                                                responsive and uses flex for
+                                                layouts across browsers.
+                                                ParticleJS is used to display
+                                                particles in the background with
+                                                interactive motion. Hosted on
+                                                ahosting using FTP to upload and
+                                                update.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://baokhoavu.com">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://github.com/baokhoavu/reactportfolio">
+                                                    View Work
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                    </div>
+                                </ModalBox>
+                                <ModalBox
+                                    onClick={this.modalI}
+                                    className={
+                                        this.state.modalI ? "click" : "unclick"
+                                    }
+                                >
+                                    <SlideShowKris></SlideShowKris>
+                                    <div className="slide-descrip">
+                                        <div>
+                                            <h2>KristeenaJS</h2>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                NextJs, ReactJs, SCSS, NodeJS,
+                                                Snipcart API
+                                            </p>
+                                            <p className="copy">
+                                                Developed a landing page that's
+                                                used to promote information
+                                                while offering ecommerce
+                                                services as a Single Page
+                                                Application. Utilizing an API
+                                                for ecommerce services
+                                                connecting with the inventory,
+                                                users are allowed seamless
+                                                experience across browsers.
+                                                Users can also edit their
+                                                selection and revisit their
+                                                choices if desired.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <Linkable>
+                                                <a href="https://kristeenajs.herokuapp.com/">
+                                                    View Website
+                                                </a>
+                                            </Linkable>
+                                            <Linkable>
+                                                <a href="https://github.com/baokhoavu/kristeenajs">
+                                                    View Work
+                                                </a>
+                                            </Linkable>
+                                        </div>
+                                    </div>
+                                </ModalBox>
                                 <ModalContainer
                                     onClick={this.closeModalA}
                                     className={
@@ -1442,6 +1595,18 @@ export default class Home extends Component {
                                     onClick={this.closeModalG}
                                     className={
                                         this.state.modalG ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
+                                <ModalContainer
+                                    onClick={this.closeModalH}
+                                    className={
+                                        this.state.modalH ? "click" : "unclick"
+                                    }
+                                ></ModalContainer>
+                                <ModalContainer
+                                    onClick={this.closeModalI}
+                                    className={
+                                        this.state.modalI ? "click" : "unclick"
                                     }
                                 ></ModalContainer>
                             </Interactivecontainer>
