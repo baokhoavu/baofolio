@@ -110,15 +110,7 @@ export default class About extends Component {
                                 <span className="title">Experience</span>
                             </h1>
                             <h2>
-                                <span>Lead Developer</span> 2020 ~ Present,
-                                Causeforce
-                            </h2>
-                            <h2>
-                                <span>Freelance Developer</span> 2017 ~ Present,
-                                Self
-                            </h2>
-                            <h2>
-                                <span>Front End Developer</span> 2018 ~ 2020,
+                                <span>Lead Developer</span> 2018 ~ Present,
                                 Causeforce
                             </h2>
                         </div>
