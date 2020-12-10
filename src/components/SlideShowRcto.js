@@ -25,8 +25,6 @@ const SlideImage = styled.img`
     &.d {
         background-image: url(${d});
     }
-
-
 `;
 
 const SlideShowOci = () => {
@@ -37,13 +35,11 @@ const SlideShowOci = () => {
                     <div className="image-container">
                         <SlideImage className="a" />
                     </div>
-                    {/* <h2>First Slide</h2> */}
                 </div>
                 <div className="each-fade">
                     <div className="image-container">
                         <SlideImage className="b" />
                     </div>
-                    {/* <h2>Second Slide</h2> */}
                 </div>
                 <div className="each-fade">
                     <div className="image-container">
