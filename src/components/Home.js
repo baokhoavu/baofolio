@@ -1285,7 +1285,7 @@ export default class Home extends Component {
                                                 </a>
                                             </Linkable>
                                             <Linkable>
-                                                <a href="https://bitbucket.org/baokhoa/koi">
+                                                <a href="https://github.com/baokhoavu/koi">
                                                     View Work
                                                 </a>
                                             </Linkable>
